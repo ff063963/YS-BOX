@@ -24,7 +24,8 @@ echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 //播放界面
 cp $CURRENT_DIR/DIY2/J/player_vod_control_view.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
 cp $CURRENT_DIR/DIY2/J/VodController.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
-
+cp $CURRENT_DIR/DIY2/J/play_mobile_center_shape.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
+cp $CURRENT_DIR/DIY2/J/shape_dialog_top_bg.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
 
 //设置界面
 cp $CURRENT_DIR/DIY/J/HomeActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
@@ -36,6 +37,14 @@ cp $CURRENT_DIR/DIY2/J/ApiConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/gi
 cp $CURRENT_DIR/DIY2/J/ApiDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
 cp $CURRENT_DIR/DIY2/J/dialog_api.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
 cp $CURRENT_DIR/DIY2/J/LivePlayActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
+
+//增加参数
+cp $CURRENT_DIR/DIY2/J/dimens.xml $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
+cp $CURRENT_DIR/DIY2/J/colors.xml $CURRENT_DIR/$DIR/app/src/main/res/values/colors.xml
+cp $CURRENT_DIR/DIY2/J/strings.xml $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
+
+//增加图标 
+cp $CURRENT_DIR/DIY2/J/hm_history.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
 
 #搜索修改
 #cp $CURRENT_DIR/DIY/q2/搜索/dialog_checkbox_search.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
