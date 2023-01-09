@@ -34,6 +34,11 @@ cp $CURRENT_DIR/DIY2/J/设置/fragment_model.xml           $CURRENT_DIR/$DIR/app
 //增加版本 更新说明
 cp $CURRENT_DIR/DIY2/J/设置/VersionDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/VersionDialog.java
 cp $CURRENT_DIR/DIY2/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
+//添加直播历史
+cp $CURRENT_DIR/DIY2/J/设置/ApiConfig.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
+cp $CURRENT_DIR/DIY2/J/设置//ApiDialog.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
+cp $CURRENT_DIR/DIY2/J/设置/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
+cp $CURRENT_DIR/DIY2/J/设置/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
 
 //搜索修改
 cp $CURRENT_DIR/DIY2/J/搜索/dialog_checkbox_search.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
@@ -41,12 +46,8 @@ cp $CURRENT_DIR/DIY2/J/搜索/SearchCheckboxDialog.java             $CURRENT_DIR
 cp $CURRENT_DIR/DIY2/J/搜索/button_dialog_main.xml                $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_dialog_main.xml
 cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
 
-
-//添加直播历史
-cp $CURRENT_DIR/DIY2/J/设置/ApiConfig.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
-cp $CURRENT_DIR/DIY2/J/设置//ApiDialog.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
-cp $CURRENT_DIR/DIY2/J/设置/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
-cp $CURRENT_DIR/DIY2/J/设置/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
+//直播修改
+cp $CURRENT_DIR/DIY2/J/直播/activity_live_play.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_live_play.xml
 
 //增加参数
 cp $CURRENT_DIR/DIY2/J/dimens.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
