@@ -152,7 +152,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
         tvHomeApi.setText(ApiConfig.get().getHomeSourceBean().getName());
         tvScale.setText(PlayerHelper.getScaleName(Hawk.get(HawkConfig.PLAY_SCALE, 0)));
         tvPlay.setText(PlayerHelper.getPlayerName(Hawk.get(HawkConfig.PLAY_TYPE, 0)));
-        tvRender.setText(PlayerHelper.getRenderName(Hawk.get(HawkConfig.PLAY_RENDER, 2)));
+        tvRender.setText(PlayerHelper.getRenderName(Hawk.get(HawkConfig.PLAY_RENDER, 0)));
         
         tvIjkCachePlay.setText(Hawk.get(HawkConfig.IJK_CACHE_PLAY, true) ? "开启" : "关闭");
         
@@ -246,7 +246,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String api) {
-                        Hawk.put(HawkConfig.API_URL, api);
+                        Hawk.put(HawkConfig.API_URL, "这是什么/n就的撒");
                         tvApi.setText(api);
                         dialog.dismiss();
                     }
