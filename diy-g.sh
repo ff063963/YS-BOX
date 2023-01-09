@@ -71,8 +71,9 @@ mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxx
 
 #背景修改
 cp $CURRENT_DIR/DIY2/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
+
 #名称修改
-sed -i 's#android:text="@string/app_name";#android:text="一言";#g'   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
+sed -i 's#@string/app_name;#一言;#g'   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
 
 #首页多排
 sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
