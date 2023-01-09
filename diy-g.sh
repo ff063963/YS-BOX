@@ -61,7 +61,7 @@ cp $CURRENT_DIR/DIY2/J/PlayerUtils.java   $CURRENT_DIR/$DIR/player/src/main/java
 cp $CURRENT_DIR/DIY2/hm_history.png   $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
 //解码修改
 cp $CURRENT_DIR/DIY2/J/解码/IjkMediaPlayer.java   $CURRENT_DIR/$DIR/player/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java
-
+cp $CURRENT_DIR/DIY2/J/解码/ExoMediaPlayer.java   $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/exo/ExoMediaPlayer.java
 
 #图标修改
 cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-hdpi/app_icon.png
