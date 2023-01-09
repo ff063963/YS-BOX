@@ -239,7 +239,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                     return;
                 String current = Hawk.get(HawkConfig.API_URL, "这是什么/n就的撒");               
              if (current.isEmpty()) {
-            callback.error("-1");
+        //    callback.error("-1");
             return;
         }
                 
