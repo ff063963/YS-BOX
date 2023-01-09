@@ -20,61 +20,6 @@ echo "RELEASE_KEY_ALIAS=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 echo "RELEASE_STORE_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 
-//播放界面
-#cp $CURRENT_DIR/DIY2/player_vod_control_view.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
-//设置界面
-cp $CURRENT_DIR/DIY2/ApiConfig1.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
-cp $CURRENT_DIR/DIY2/ApiDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
-cp $CURRENT_DIR/DIY2/dialog_api1.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
-cp $CURRENT_DIR/DIY2/LivePlayActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
-
-
-//直播修改
-
-#cp $CURRENT_DIR/DIY2/LivePlayActivitytaka.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
-#cp $CURRENT_DIR/DIY2/activity_live_playtaka.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_live_play.xml
-#cp $CURRENT_DIR/DIY2/bg_live.xml  $CURRENT_DIR/$DIR/app/src/main/res/drawable/bg_live.xml
-#cp $CURRENT_DIR/DIY2/img_logo_placeholder.png  $CURRENT_DIR/$DIR/app/src/main/res/drawable/img_logo_placeholder.png
-#cp $CURRENT_DIR/DIY2/shape_live_bg_bottom.xml  $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_live_bg_bottom.xml
-#cp $CURRENT_DIR/DIY2/channel_num_bg.xml  $CURRENT_DIR/$DIR/app/src/main/res/drawable/channel_num_bg.xml
-#cp $CURRENT_DIR/DIY2/shape_user_pause.xml  $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_user_pause.xml
-
-//增加版本 更新说明
-mv $CURRENT_DIR/DIY2/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
-#sed -i 's#6666#1.5.0  快进改为1.75,优化小窗UI,同步俊版更新#g'   $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
-//一言
-#sed -i 's/一言/微笑向暖,安之若素。/g'   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
-
-# 内置接口String apiUrl = Hawk.get(HawkConfig.API_URL, "https://gitee.com/zhoujck/tv/raw/master/box");
-#sed -i 's#String apiUrl = Hawk.get(HawkConfig.API_URL, "");#String apiUrl = Hawk.get(HawkConfig.API_URL, "https://gitee.com/zhoujck/tv/raw/master/box");#g'   $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
-
-#xwalk修复
-sed -i 's/download.01.org\/crosswalk\/releases\/crosswalk\/android\/maven2/raw.githubusercontent.com\/lm317379829\/TVBoxDIY\/main/g' $CURRENT_DIR/$DIR/build.gradle
-
-#图标修改
-cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-hdpi/app_icon.png
-cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xhdpi/app_icon.png
-cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxhdpi/app_icon.png
-mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxxhdpi/app_icon.png
-
-
-#首页多排
-sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
-sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
-
-#首页排版边框
-sed -i 's/vs_30/vs_15/g' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_select.xml
-
-#名称修改
-sed -i 's/TVBox/影视Box/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
-
-#版本号
-#sed -i 's/1.0.0/2/g' $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g' $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g' $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
-#共存
-sed -i 's/com.github.tvbox.osc/com.tvbox.Q/g' $CURRENT_DIR/$DIR/app/build.gradle
-
 #添加PY支持
 wget --no-check-certificate -qO- "https://raw.githubusercontent.com/UndCover/PyramidStore/main/aar/pyramid-1011.aar" -O $CURRENT_DIR/$DIR/app/libs/pyramid.aar
 sed -i "/thunder.jar/a\    implementation files('libs@pyramid.aar')" $CURRENT_DIR/$DIR/app/build.gradle
