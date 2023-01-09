@@ -110,8 +110,8 @@ public class VodController extends BaseController {
                         mTopRoot1.setVisibility(VISIBLE);
                         mTopRoot2.setVisibility(VISIBLE);
                         mCenterContainer.setVisibility(VISIBLE);
-                       // mPlayTitle.setVisibility(VISIBLE);
-                        mPlayTitle1.setVisibility(VISIBLE);
+                        mPlayTitle.setVisibility(VISIBLE);
+                        //mPlayTitle1.setVisibility(VISIBLE);
                         mNextBtn.requestFocus();
                         break;
                     }
