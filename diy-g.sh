@@ -44,8 +44,10 @@ cp $CURRENT_DIR/DIY2/J/colors.xml $CURRENT_DIR/$DIR/app/src/main/res/values/colo
 cp $CURRENT_DIR/DIY2/J/strings.xml $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 cp $CURRENT_DIR/DIY2/J/HawkConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java
 
-//增加图标 
-cp $CURRENT_DIR/DIY2/J/hm_history.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
+cp $CURRENT_DIR/DIY/HawkConfig.java $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/util/PlayerUtils.java
+
+//播放资源 
+cp $CURRENT_DIR/DIY2/J/PlayerUtils.java $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
 
 #搜索修改
 #cp $CURRENT_DIR/DIY/q2/搜索/dialog_checkbox_search.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
