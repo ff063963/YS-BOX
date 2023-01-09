@@ -235,9 +235,14 @@ public class ModelSettingFragment extends BaseLazyFragment {
             @Override
             public void onClick(View v) {
                 ArrayList<String> history = Hawk.get(HawkConfig.API_HISTORY, new ArrayList<String>());
-             //   if (history.isEmpty())
-                //    return;
-                String current = Hawk.get(HawkConfig.API_URL, "这是什么/n就的撒");
+              if (history.isEmpty())
+                    return;
+                String current = Hawk.get(HawkConfig.API_URL, "这是什么/n就的撒");               
+             if (current.isEmpty()) {
+            callback.error("-1");
+            return;
+        }
+                
                 int idx = 0;
                 if (history.contains(current))
                     idx = history.indexOf(current);
@@ -246,7 +251,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String api) {
-                        Hawk.put(HawkConfig.API_URL, "这是什么/n就的撒");
+                        Hawk.put(HawkConfig.API_URL, api);
                         tvApi.setText(api);
                         dialog.dismiss();
                     }
