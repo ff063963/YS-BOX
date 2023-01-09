@@ -43,11 +43,11 @@ cp $CURRENT_DIR/DIY2/J/dimens.xml $CURRENT_DIR/$DIR/app/src/main/res/values/dime
 cp $CURRENT_DIR/DIY2/J/colors.xml $CURRENT_DIR/$DIR/app/src/main/res/values/colors.xml
 cp $CURRENT_DIR/DIY2/J/strings.xml $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 cp $CURRENT_DIR/DIY2/J/HawkConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java
-
-cp $CURRENT_DIR/DIY/HawkConfig.java $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/util/PlayerUtils.java
-
 //播放资源 
-cp $CURRENT_DIR/DIY2/J/PlayerUtils.java $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
+cp $CURRENT_DIR/DIY/PlayerUtils.java $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/util/PlayerUtils.java
+
+//增加图标
+cp $CURRENT_DIR/DIY2/hm_history.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
 
 #搜索修改
 #cp $CURRENT_DIR/DIY/q2/搜索/dialog_checkbox_search.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
@@ -62,6 +62,8 @@ cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xhd
 cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxhdpi/app_icon.png
 mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxxhdpi/app_icon.png
 
+#背景修改
+cp $CURRENT_DIR/DIY/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
 
 #首页多排
 sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
@@ -70,9 +72,20 @@ sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbo
 #首页排版边框
 sed -i 's/vs_30/vs_15/g' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_select.xml
 
+# 默认设置
+cp $CURRENT_DIR/DIY/App.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/base/App.java  
+
+#自定义epg
+cp $CURRENT_DIR/DIY2/epg_data.json $CURRENT_DIR/$DIR/app/src/main/assets/epg_data.json
+
+#增加听书嗅探
+sed -i 's/|mp4|/|mp4|mp3|m4a|p2p|/'g $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/DefaultConfig.java
+
+
+#修改进度条消失时间
+sed -i 's/10000/6000/g'  $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
 #名称修改
 sed -i 's/TVBox/影视Box/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
-
 #版本号
 #sed -i 's/1.0.0/2/g' $CURRENT_DIR/$DIR/app/build.gradle
 sed -i 's/1.0.0/1.5.6/g' $CURRENT_DIR/$DIR/app/build.gradle
