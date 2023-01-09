@@ -22,42 +22,42 @@ echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 
 
 //播放界面
-cp $CURRENT_DIR/DIY2/J/player_vod_control_view.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
-cp $CURRENT_DIR/DIY2/J/VodController.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
-cp $CURRENT_DIR/DIY2/J/play_mobile_center_shape.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
-cp $CURRENT_DIR/DIY2/J/shape_dialog_top_bg.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
+cp $CURRENT_DIR/DIY2/J/player_vod_control_view.xml    $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
+cp $CURRENT_DIR/DIY2/J/VodController.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
+cp $CURRENT_DIR/DIY2/J/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
+cp $CURRENT_DIR/DIY2/J/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
 
 //设置界面
-cp $CURRENT_DIR/DIY2/J/HomeActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
-cp $CURRENT_DIR/DIY2/J/ModelSettingFragment.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
-cp $CURRENT_DIR/DIY2/J/fragment_model.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+cp $CURRENT_DIR/DIY2/J/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
+cp $CURRENT_DIR/DIY2/J/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
+cp $CURRENT_DIR/DIY2/J/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
 //增加版本 更新说明
 cp $CURRENT_DIR/DIY2/J/VersionDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/VersionDialog.java
 cp $CURRENT_DIR/DIY2/J/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
 
+//搜索修改
+cp $CURRENT_DIR/DIY2/J/搜索/dialog_checkbox_search.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
+cp $CURRENT_DIR/DIY2/J/搜索/SearchCheckboxDialog.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/SearchCheckboxDialog.java
+cp $CURRENT_DIR/DIY2/J/搜索/button_dialog_main.xml                $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_dialog_main.xml
+cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
+
+
 //添加直播历史
-cp $CURRENT_DIR/DIY2/J/ApiConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
-cp $CURRENT_DIR/DIY2/J/ApiDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
-cp $CURRENT_DIR/DIY2/J/dialog_api.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
-cp $CURRENT_DIR/DIY2/J/LivePlayActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
+cp $CURRENT_DIR/DIY2/J/ApiConfig.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
+cp $CURRENT_DIR/DIY2/J/ApiDialog.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
+cp $CURRENT_DIR/DIY2/J/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
+cp $CURRENT_DIR/DIY2/J/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
 
 //增加参数
-cp $CURRENT_DIR/DIY2/J/dimens.xml $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
-cp $CURRENT_DIR/DIY2/J/colors.xml $CURRENT_DIR/$DIR/app/src/main/res/values/colors.xml
-cp $CURRENT_DIR/DIY2/J/strings.xml $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
-cp $CURRENT_DIR/DIY2/J/HawkConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java
+cp $CURRENT_DIR/DIY2/J/dimens.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
+cp $CURRENT_DIR/DIY2/J/colors.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/colors.xml
+cp $CURRENT_DIR/DIY2/J/strings.xml        $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
+cp $CURRENT_DIR/DIY2/J/HawkConfig.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/HawkConfig.java
 //播放资源 
-cp $CURRENT_DIR/DIY2/J/PlayerUtils.java $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/util/PlayerUtils.java
+cp $CURRENT_DIR/DIY2/J/PlayerUtils.java   $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/util/PlayerUtils.java
 
 //增加图标
-cp $CURRENT_DIR/DIY2/hm_history.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
-
-#搜索修改
-#cp $CURRENT_DIR/DIY/q2/搜索/dialog_checkbox_search.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
-#cp $CURRENT_DIR/DIY/q2/搜索/SearchCheckboxDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/SearchCheckboxDialog.java
-#cp $CURRENT_DIR/DIY/q2/搜索/button_dialog_main.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_dialog_main.xml
-#cp $CURRENT_DIR/DIY/q2/搜索/shape_dialog_pg_search_checkbox.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
-
+cp $CURRENT_DIR/DIY2/hm_history.png   $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_history.png
 
 #图标修改
 cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-hdpi/app_icon.png
@@ -90,9 +90,9 @@ sed -i 's/10000/6000/g'  $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/os
 #名称修改
 sed -i 's/TVBox/影视Box/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 #版本号
-#sed -i 's/1.0.0/2/g' $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g' $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g' $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+#sed -i 's/1.0.0/2/g'     $CURRENT_DIR/$DIR/app/build.gradle
+sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/build.gradle
+sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
 #共存
 sed -i 's/com.github.tvbox.osc/com.tvbox.Z/g' $CURRENT_DIR/$DIR/app/build.gradle
 
