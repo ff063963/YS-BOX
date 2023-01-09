@@ -22,18 +22,18 @@ echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 
 
 //播放界面
-cp $CURRENT_DIR/DIY2/J/player_vod_control_view.xml    $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
-cp $CURRENT_DIR/DIY2/J/VodController.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
-cp $CURRENT_DIR/DIY2/J/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
-cp $CURRENT_DIR/DIY2/J/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
+cp $CURRENT_DIR/DIY2/J/播放/player_vod_control_view.xml    $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
+cp $CURRENT_DIR/DIY2/J/播放/VodController.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
+cp $CURRENT_DIR/DIY2/J/播放/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
+cp $CURRENT_DIR/DIY2/J/播放/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
 
 //设置界面
-cp $CURRENT_DIR/DIY2/J/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
-cp $CURRENT_DIR/DIY2/J/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
-cp $CURRENT_DIR/DIY2/J/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+cp $CURRENT_DIR/DIY2/J/设置/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
+cp $CURRENT_DIR/DIY2/J/设置/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
+cp $CURRENT_DIR/DIY2/J/设置/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
 //增加版本 更新说明
-cp $CURRENT_DIR/DIY2/J/VersionDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/VersionDialog.java
-cp $CURRENT_DIR/DIY2/J/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
+cp $CURRENT_DIR/DIY2/J/设置/VersionDialog.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/VersionDialog.java
+cp $CURRENT_DIR/DIY2/J/设置/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
 
 //搜索修改
 cp $CURRENT_DIR/DIY2/J/搜索/dialog_checkbox_search.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
@@ -43,10 +43,10 @@ cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR
 
 
 //添加直播历史
-cp $CURRENT_DIR/DIY2/J/ApiConfig.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
-cp $CURRENT_DIR/DIY2/J/ApiDialog.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
-cp $CURRENT_DIR/DIY2/J/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
-cp $CURRENT_DIR/DIY2/J/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
+cp $CURRENT_DIR/DIY2/J/设置/ApiConfig.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
+cp $CURRENT_DIR/DIY2/J/设置//ApiDialog.java           $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/ApiDialog.java
+cp $CURRENT_DIR/DIY2/J/设置/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
+cp $CURRENT_DIR/DIY2/J/设置/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
 
 //增加参数
 cp $CURRENT_DIR/DIY2/J/dimens.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
@@ -94,7 +94,7 @@ sed -i 's/TVBox/影视Box/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.x
 sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/build.gradle
 sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
 #共存
-sed -i 's/com.github.tvbox.osc/com.tvbox.Z/g' $CURRENT_DIR/$DIR/app/build.gradle
+sed -i 's/com.github.tvbox.osc/com.tvbox./g' $CURRENT_DIR/$DIR/app/build.gradle
 
 
 #添加PY支持
