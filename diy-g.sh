@@ -28,9 +28,11 @@ cp $CURRENT_DIR/DIY2/J/play_mobile_center_shape.xml $CURRENT_DIR/$DIR/app/src/ma
 cp $CURRENT_DIR/DIY2/J/shape_dialog_top_bg.xml $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
 
 //设置界面
-cp $CURRENT_DIR/DIY/J/HomeActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
-cp $CURRENT_DIR/DIY/J/ModelSettingFragment.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
-cp $CURRENT_DIR/DIY/J/fragment_model.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+cp $CURRENT_DIR/DIY2/J/HomeActivity.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
+cp $CURRENT_DIR/DIY2/J/ModelSettingFragment.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
+cp $CURRENT_DIR/DIY2/J/fragment_model.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+//增加版本 更新说明
+mv $CURRENT_DIR/DIY2/dialog_version.xml $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_version.xml
 
 //添加直播历史
 cp $CURRENT_DIR/DIY2/J/ApiConfig.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java
@@ -63,7 +65,7 @@ cp $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxh
 mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxxhdpi/app_icon.png
 
 #背景修改
-cp $CURRENT_DIR/DIY/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
+cp $CURRENT_DIR/DIY2/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
 
 #首页多排
 sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
