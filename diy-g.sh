@@ -46,6 +46,12 @@ cp $CURRENT_DIR/DIY2/J/搜索/SearchCheckboxDialog.java             $CURRENT_DIR
 cp $CURRENT_DIR/DIY2/J/搜索/button_dialog_main.xml                $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_dialog_main.xml
 cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
 
+//小窗修改
+cp $CURRENT_DIR/DIY2/J/小窗/activity_detail.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_detail.xml
+
+//图片间距修改
+cp $CURRENT_DIR/DIY2/J/fragment_grid.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_grid.xml
+
 //直播修改
 cp $CURRENT_DIR/DIY2/J/直播/activity_live_play.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_live_play.xml
 
