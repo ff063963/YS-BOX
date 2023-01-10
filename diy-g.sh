@@ -79,7 +79,8 @@ mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxx
 cp $CURRENT_DIR/DIY2/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
 
 #名称修改
-sed -i 's#@string/app_name;#一言;#g'   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
+cp $CURRENT_DIR/DIY2/J/activity_home.xml   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
+
 
 #首页多排
 sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
@@ -99,7 +100,6 @@ sed -i 's/|mp4|/|mp4|mp3|m4a|p2p|/'g $CURRENT_DIR/$DIR/app/src/main/java/com/git
 
 //播放文字修改
 #cp $CURRENT_DIR/DIY/PlayerHelper.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/PlayerHelper.java
-
 sed -i 's/播放器//g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/PlayerHelper.java
 sed -i 's/TextureView/Texture/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/PlayerHelper.java
 sed -i 's/SurfaceView/Surface/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/util/PlayerHelper.java
