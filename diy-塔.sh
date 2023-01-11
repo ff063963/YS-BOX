@@ -32,7 +32,7 @@ sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.x
 mv $CURRENT_DIR/DIY2/图标2.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_icon.png
 
 #背景修改
-mv $CURRENT_DIR/DIY2/背景1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
+mv $CURRENT_DIR/DIY2/10.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
 #自定义epg
 cp $CURRENT_DIR/DIY2/epg_data.json $CURRENT_DIR/$DIR/app/src/main/assets/epg_data.json
 
