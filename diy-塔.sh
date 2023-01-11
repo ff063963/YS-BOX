@@ -22,11 +22,13 @@ echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 sed -i 's/download.01.org\/crosswalk\/releases\/crosswalk\/android\/maven2/raw.githubusercontent.com\/zxyadc\/YS-BOX\/main/g' $CURRENT_DIR/$DIR/build.gradle
 #多排修改
 cp $CURRENT_DIR/DIY2/T/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
-cp $CURRENT_DIR/DIY2//ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
+cp $CURRENT_DIR/DIY2/T/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
 
 #名称修改
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
+#首页颜色修改
+sed -i 's/color_FFFFFF_70/color_FFFFFF/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/item_home_sort.xml
 
 #图标修改
 mv $CURRENT_DIR/DIY2/图标2.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_icon.png
