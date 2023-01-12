@@ -31,7 +31,7 @@ sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.x
 sed -i 's/color_FFFFFF_70/color_FFFFFF/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/item_home_sort.xml
 
 #图标修改
-mv $CURRENT_DIR/DIY2/图标2.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_icon.png
+mv $CURRENT_DIR/DIY2/图标3.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_icon.png
 
 #背景修改
 mv $CURRENT_DIR/DIY2/10.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
