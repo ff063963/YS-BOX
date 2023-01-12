@@ -19,7 +19,7 @@ echo "RELEASE_KEY_ALIAS=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 echo "RELEASE_STORE_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 echo "RELEASE_KEY_PASSWORD=TVBoxOSC" >>$CURRENT_DIR/$DIR/gradle.properties
 #xwalk修复
-sed -i 's/download.01.org\/crosswalk\/releases\/crosswalk\/android\/maven2/raw.githubusercontent.com\/zxyadc\/YS-BOX\/main/g' $CURRENT_DIR/$DIR/build.gradle
+cp $CURRENT_DIR/DIY2/T/build.gradle     $CURRENT_DIR/$DIR/build.gradle
 
 //搜索界面
 cp $CURRENT_DIR/DIY2/T/SearchCheckboxDialog.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/SearchCheckboxDialog.java
