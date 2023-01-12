@@ -33,6 +33,10 @@ cp $CURRENT_DIR/DIY2/T/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/ma
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 
+//增加参数
+cp $CURRENT_DIR/DIY2/J/dimens.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
+cp $CURRENT_DIR/DIY2/J/colors.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/colors.xml
+cp $CURRENT_DIR/DIY2/J/strings.xml        $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 
 #图标修改
 mv $CURRENT_DIR/DIY2/图标3.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_icon.png
