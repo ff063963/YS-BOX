@@ -28,7 +28,10 @@ cp $CURRENT_DIR/DIY2/T/SearchCheckboxDialog.java             $CURRENT_DIR/$DIR/a
 cp $CURRENT_DIR/DIY2/T/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
 cp $CURRENT_DIR/DIY2/T/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
 cp $CURRENT_DIR/DIY2/T/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+cp $CURRENT_DIR/DIY2/T/dialog_api.xml               $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
 
+//首页界面
+cp $CURRENT_DIR/DIY2/T/activity_home.xml            $CURRENT_DIR/$DIR/app/app/src/main/res/layout/activity_home.xml
 #名称修改
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
@@ -54,6 +57,9 @@ sed -i 's/SurfaceView/Surface/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/
 
 //按键背景颜色
 sed -i 's/color_6A6A6A_95/color_DDDAC6/g' $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_bg_main.xml
+
+# 默认设置
+cp $CURRENT_DIR/DIY2/T/App.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/base/App.java
 
 #首页排版边框
 sed -i 's/vs_30/vs_15/g' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_select.xml
