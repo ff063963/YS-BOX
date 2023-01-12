@@ -59,12 +59,12 @@ sed -i 's/SurfaceView/Surface/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/
 sed -i 's/color_6A6A6A_95/color_DDDAC6/g' $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_bg_main.xml
 
 //字体颜色
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_backup.xml
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api_history.xml
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_about.xml
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_webdav.xml
-sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_xwalk.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_backup.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api_history.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_about.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_webdav.xml
+#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_xwalk.xml
 
 # 默认设置
 cp $CURRENT_DIR/DIY2/T/App.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/base/App.java
