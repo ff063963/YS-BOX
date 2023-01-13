@@ -924,9 +924,9 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="@dimen/vs_8"
-                android:text="硬解码"
+                android:text="硬码"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_16" />
+                android:textSize="@dimen/ts_10" />
 
             <LinearLayout
                 android:id="@+id/play_subtitle"
