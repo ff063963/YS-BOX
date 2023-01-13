@@ -94,10 +94,10 @@ public class ApiDialog extends BaseDialog {
                         liveHistory.remove(20);
                     Hawk.put(HawkConfig.LIVE_HISTORY, liveHistory);
                 }
-                // Capture EPG input into Settings
-                Hawk.put(HawkConfig.EPG_URL, newEPG);
-                
-                
+           
+                // Capture Live & EPG input and save into Settings
+                Hawk.put(HawkConfig.LIVE_URL, inputLive.getText().toString().trim());
+                Hawk.put(HawkConfig.EPG_URL, inputEPG.getText().toString().trim());
             }
         });
         findViewById(R.id.apiHistory).setOnClickListener(new View.OnClickListener() {
