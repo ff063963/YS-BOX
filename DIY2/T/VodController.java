@@ -339,24 +339,30 @@ public class VodController extends BaseController {
         // 1. Media Control Buttons
         mPreBtn = findViewById(R.id.play_prev);
         mPauseBtn = findViewById(R.id.play_pause);
-        mPauseImg = findViewById(R.id.play_pauseImg);
+       
         mNextBtn = findViewById(R.id.play_next);
         mPlayerRetry = findViewById(R.id.play_retry);
 
+        /*
+         mPauseImg = findViewById(R.id.play_pauseImg);
+         mFFwdImg = findViewById(R.id.play_speed_img);
+         mPlayerScaleImg = findViewById(R.id.play_scale_img); 
+         mPlayerImg = findViewById(R.id.play_player_img);
+        
+         mFFwdTxt = findViewById(R.id.play_speed_txt);
+         mPlayerTxt = findViewById(R.id.play_player_txt);
+        */
         // Fast Forward Buttons
         mFFwdBtn = findViewById(R.id.play_speed);
-        mFFwdImg = findViewById(R.id.play_speed_img);
-        mFFwdTxt = findViewById(R.id.play_speed_txt);
-
+   
+     
         // Scale Buttons
         mPlayerScaleBtn = findViewById(R.id.play_scale);
-        mPlayerScaleImg = findViewById(R.id.play_scale_img);
+
         mPlayerScaleTxt = findViewById(R.id.play_scale_txt);
 
         // Player Buttons
         mPlayerBtn = findViewById(R.id.play_player);
-        mPlayerImg = findViewById(R.id.play_player_img);
-        mPlayerTxt = findViewById(R.id.play_player_txt);
         mPlayerIJKBtn = findViewById(R.id.play_ijk);
 
         mSubtitleBtn = findViewById(R.id.play_subtitle);
