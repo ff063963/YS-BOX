@@ -716,14 +716,14 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:nextFocusLeft="@id/play_time_end"
-                android:orientation="horizontal" />
-     <!--  
+                android:orientation="horizontal" >
+  
                 <ImageView
                     android:layout_width="@dimen/vs_60"
                     android:layout_height="@dimen/vs_60"
                     android:layout_gravity="center"
                     android:src="@drawable/v_prev" />
-        -->   
+
             </LinearLayout>
 
             <LinearLayout
