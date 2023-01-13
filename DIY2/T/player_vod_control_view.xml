@@ -715,10 +715,10 @@
                 android:background="@drawable/button_dialog_vod"
                 android:focusable="true"
                 android:padding="@dimen/vs_10"
-                android:text="上一集"
+                android:text="上集"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20"         
-                android:focusable="true"
+ 
                 android:gravity="center"
                 android:nextFocusLeft="@id/play_time_end"
                 android:orientation="horizontal" />
@@ -924,7 +924,7 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="@dimen/vs_8"
-                android:text="硬码"
+                android:text="硬解码"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_10" />
 
