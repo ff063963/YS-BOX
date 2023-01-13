@@ -32,6 +32,7 @@ cp $CURRENT_DIR/DIY2/T/dialog_api.xml               $CURRENT_DIR/$DIR/app/src/ma
 
 //首页界面
 cp $CURRENT_DIR/DIY2/T/activity_home.xml            $CURRENT_DIR/$DIR/app/app/src/main/res/layout/activity_home.xml
+cp $CURRENT_DIR/DIY2/T/fragment_user.xml            $CURRENT_DIR/$DIR/app/app/src/main/res/layout/fragment_user.xml
 #名称修改
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
