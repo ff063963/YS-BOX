@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_hist"
@@ -89,7 +89,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_live"
@@ -127,7 +127,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_fav"
@@ -165,7 +165,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_search"
@@ -204,7 +204,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_push"
@@ -244,7 +244,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_file"
@@ -283,7 +283,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:fontFamily="sans-serif-black"
+
                 android:gravity="center"
                 android:padding="@dimen/vs_3"
                 android:text="@string/hm_setting"
