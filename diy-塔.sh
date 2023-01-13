@@ -36,6 +36,7 @@ cp $CURRENT_DIR/DIY2/T/fragment_user.xml            $CURRENT_DIR/$DIR/app/src/ma
 
 //播放界面
 cp $CURRENT_DIR/DIY2/T/player_vod_control_view.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
+cp $CURRENT_DIR/DIY2/T/VodController.java                     $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
 
 #名称修改
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
