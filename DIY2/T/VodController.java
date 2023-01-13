@@ -351,6 +351,7 @@ public class VodController extends BaseController {
         
          mFFwdTxt = findViewById(R.id.play_speed_txt);
          mPlayerTxt = findViewById(R.id.play_player_txt);
+         mPlayerScaleTxt = findViewById(R.id.play_scale_txt);
         */
         // Fast Forward Buttons
         mFFwdBtn = findViewById(R.id.play_speed);
@@ -359,7 +360,7 @@ public class VodController extends BaseController {
         // Scale Buttons
         mPlayerScaleBtn = findViewById(R.id.play_scale);
 
-        mPlayerScaleTxt = findViewById(R.id.play_scale_txt);
+
 
         // Player Buttons
         mPlayerBtn = findViewById(R.id.play_player);
