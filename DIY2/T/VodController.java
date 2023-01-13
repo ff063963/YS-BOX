@@ -258,25 +258,25 @@ public class VodController extends BaseController {
     // 1. media control
     LinearLayout mPreBtn;
     LinearLayout mPauseBtn;
-    ImageView mPauseImg;
+    //ImageView mPauseImg;
     LinearLayout mNextBtn;
     float mSpeed;
     LinearLayout mPlayerRetry;
 
     // Fast Forward Buttons
     LinearLayout mFFwdBtn;
-    ImageView mFFwdImg;
-    TextView mFFwdTxt;
+    //ImageView mFFwdImg;
+    //TextView mFFwdTxt;
 
     // Scale Buttons
     LinearLayout mPlayerScaleBtn;
-    ImageView mPlayerScaleImg;
-    TextView mPlayerScaleTxt;
+    //ImageView mPlayerScaleImg;
+    //TextView mPlayerScaleTxt;
 
     // Player Buttons
     LinearLayout mPlayerBtn;
-    ImageView mPlayerImg;
-    TextView mPlayerTxt;
+   // ImageView mPlayerImg;
+   // TextView mPlayerTxt;
     TextView mPlayerIJKBtn;
     LinearLayout mSubtitleBtn;
 
@@ -870,11 +870,11 @@ public class VodController extends BaseController {
                 mSpeedHidell.setVisibility(GONE);
                 mSpeedll.setVisibility(GONE);
             }
-            mPlayerTxt.setText(PlayerHelper.getPlayerName(playerType));
-            mPlayerScaleTxt.setText(PlayerHelper.getScaleName(mPlayerConfig.getInt("sc")));
+            //mPlayerTxt.setText(PlayerHelper.getPlayerName(playerType));
+            //mPlayerScaleTxt.setText(PlayerHelper.getScaleName(mPlayerConfig.getInt("sc")));
             mPlayerIJKBtn.setText(mPlayerConfig.getString("ijk"));
             mPlayerIJKBtn.setVisibility(playerType == 1 ? VISIBLE : GONE);
-            mFFwdTxt.setText("x" + mPlayerConfig.getDouble("sp"));
+            //mFFwdTxt.setText("x" + mPlayerConfig.getDouble("sp"));
             mPlayerTimeStartBtn.setText(PlayerUtils.stringForTime(mPlayerConfig.getInt("st") * 1000));
             mPlayerTimeSkipBtn.setText(PlayerUtils.stringForTime(mPlayerConfig.getInt("et") * 1000));
             mPlayerTimeStepBtn.setText(Hawk.get(HawkConfig.PLAY_TIME_STEP, 5) + "s");
@@ -1047,12 +1047,12 @@ public class VodController extends BaseController {
                 break;
             case VideoView.STATE_PLAYING:
                 isPaused = false;
-                mPauseImg.setImageDrawable(getResources().getDrawable(R.drawable.v_pause));
+              //  mPauseImg.setImageDrawable(getResources().getDrawable(R.drawable.v_pause));
                 startProgress();
                 break;
             case VideoView.STATE_PAUSED:
                 isPaused = true;
-                mPauseImg.setImageDrawable(getResources().getDrawable(R.drawable.v_play));
+               // mPauseImg.setImageDrawable(getResources().getDrawable(R.drawable.v_play));
                 break;
             case VideoView.STATE_ERROR:
                 listener.errReplay();
