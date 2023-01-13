@@ -670,7 +670,7 @@ public class HomeActivity extends BaseActivity {
             SelectDialog<SourceBean> dialog = new SelectDialog<>(HomeActivity.this);
 
             // Multi Column Selection
-            int spanCount = (int) Math.floor(sites.size() / 1);
+            int spanCount = (int) Math.floor(sites.size() / 4);
             if (spanCount <= 1) spanCount = 1;
             if (spanCount >= 2) spanCount = 2;
 
@@ -682,7 +682,8 @@ public class HomeActivity extends BaseActivity {
                 clp.width = AutoSizeUtils.mm2px(dialog.getContext(), 340+200 * (spanCount - 1));
             }
 
-            dialog.setTip(getString(R.string.dia_source));
+            dialog.setTip("首页固定数据源");
+            //dialog.setTip(getString(R.string.dia_source));
             dialog.setAdapter(new SelectDialogAdapter.SelectDialogInterface<SourceBean>() {
                 @Override
                 public void click(SourceBean value, int pos) {
