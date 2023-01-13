@@ -35,9 +35,11 @@ cp $CURRENT_DIR/DIY2/T/activity_home.xml            $CURRENT_DIR/$DIR/app/src/ma
 cp $CURRENT_DIR/DIY2/T/fragment_user.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_user.xml
 
 //播放界面
-cp $CURRENT_DIR/DIY2/J/播放/player_vod_control_view.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
-cp $CURRENT_DIR/DIY2/J/播放/T/VodController.java                   $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
-
+cp $CURRENT_DIR/DIY2/J/播放/player_vod_control_view.xml    $CURRENT_DIR/$DIR/app/src/main/res/layout/player_vod_control_view.xml
+cp $CURRENT_DIR/DIY2/J/播放/VodController.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
+cp $CURRENT_DIR/DIY2/J/播放/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
+cp $CURRENT_DIR/DIY2/J/播放/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
+cp $CURRENT_DIR/DIY2/T/icon_play.png        $CURRENT_DIR/$DIR/app/src/main/res/drawable/icon_play.png
 #名称修改
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values-zh/strings.xml
 sed -i 's/TVBox/影视One/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
@@ -64,13 +66,6 @@ sed -i 's/SurfaceView/Surface/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/
 //按键背景颜色
 sed -i 's/color_6A6A6A_95/color_DDDAC6/g' $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_bg_main.xml
 
-//字体颜色
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_backup.xml
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api_history.xml
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_about.xml
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_webdav.xml
-#sed -i 's/color_FFFFFF/color_CC000000/' $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_xwalk.xml
 
 # 默认设置
 cp $CURRENT_DIR/DIY2/T/App.java $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/base/App.java
