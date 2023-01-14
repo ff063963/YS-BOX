@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import com.github.tvbox.osc.R;
 import com.github.tvbox.osc.event.RefreshEvent;
 import com.github.tvbox.osc.server.ControlManager;
-import com.github.tvbox.osc.ui.activity.HomeActivity;
 import com.github.tvbox.osc.ui.adapter.ApiHistoryDialogAdapter;
 import com.github.tvbox.osc.ui.tv.QRCodeGen;
 import com.github.tvbox.osc.util.HawkConfig;
@@ -31,6 +30,7 @@ import java.util.List;
 
 import me.jessyan.autosize.utils.AutoSizeUtils;
 
+
 /**
  * 描述
  *
@@ -38,12 +38,13 @@ import me.jessyan.autosize.utils.AutoSizeUtils;
  * @since 2020/12/27
  */
 public class ApiDialog extends BaseDialog {
-    private final ImageView ivQRCode;
-    private final TextView tvAddress;
-    private final EditText inputApi;
-    private final EditText inputLive;
+    private ImageView ivQRCode;
+    private TextView tvAddress;
+    private EditText inputApi;
+//taka epg 直播地址
+   private final EditText inputLive;
     private final EditText inputEPG;
-
+   
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void refresh(RefreshEvent event) {
         if (event.type == RefreshEvent.TYPE_API_URL_CHANGE) {
@@ -54,42 +55,36 @@ public class ApiDialog extends BaseDialog {
     public ApiDialog(@NonNull @NotNull Context context) {
         super(context);
         setContentView(R.layout.dialog_api);
-        setCanceledOnTouchOutside(true);
+        setCanceledOnTouchOutside(false);
         ivQRCode = findViewById(R.id.ivQRCode);
         tvAddress = findViewById(R.id.tvAddress);
         inputApi = findViewById(R.id.input);
+        //内置网络接口在此处添加
         inputApi.setText(Hawk.get(HawkConfig.API_URL, ""));
-
         // takagen99: Add Live & EPG Address
         inputLive = findViewById(R.id.input_live);
         inputLive.setText(Hawk.get(HawkConfig.LIVE_URL, ""));
         inputEPG = findViewById(R.id.input_epg);
         inputEPG.setText(Hawk.get(HawkConfig.EPG_URL, ""));
-
+        
+        
         findViewById(R.id.inputSubmit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String newApi = inputApi.getText().toString().trim();
-                String newLive = inputLive.getText().toString().trim();
+                 String newLive = inputLive.getText().toString().trim();
                 String newEPG = inputEPG.getText().toString().trim();
-                // takagen99: Convert all to clan://localhost format
-                if (newApi.startsWith("file://")) {
-                    newApi = newApi.replace("file://", "clan://localhost/");
-                } else if (newApi.startsWith("./")) {
-                    newApi = newApi.replace("./", "clan://localhost/");
-                }
                 if (!newApi.isEmpty()) {
                     ArrayList<String> history = Hawk.get(HawkConfig.API_HISTORY, new ArrayList<String>());
                     if (!history.contains(newApi))
                         history.add(0, newApi);
-                    if (history.size() > 20)
-                        history.remove(20);
+                    if (history.size() > 30)
+                        history.remove(30);
                     Hawk.put(HawkConfig.API_HISTORY, history);
                     listener.onchange(newApi);
                     dismiss();
                 }
-
-                // Capture Live input into Settings & Live History (max 20)
+  // Capture Live input into Settings & Live History (max 20)
                 Hawk.put(HawkConfig.LIVE_URL, newLive);
                 if (!newLive.isEmpty()) {
                     ArrayList<String> liveHistory = Hawk.get(HawkConfig.LIVE_HISTORY, new ArrayList<String>());
@@ -101,6 +96,8 @@ public class ApiDialog extends BaseDialog {
                 }
                 // Capture EPG input into Settings
                 Hawk.put(HawkConfig.EPG_URL, newEPG);
+                
+                
             }
         });
         findViewById(R.id.apiHistory).setOnClickListener(new View.OnClickListener() {
@@ -114,7 +111,6 @@ public class ApiDialog extends BaseDialog {
                 if (history.contains(current))
                     idx = history.indexOf(current);
                 ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
-                //dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_list));
                 dialog.setTip("历史配置列表");
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
@@ -132,7 +128,8 @@ public class ApiDialog extends BaseDialog {
                 dialog.show();
             }
         });
-        findViewById(R.id.liveHistory).setOnClickListener(new View.OnClickListener() {
+        //直播历史列表
+          findViewById(R.id.liveHistory).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayList<String> liveHistory = Hawk.get(HawkConfig.LIVE_HISTORY, new ArrayList<String>());
@@ -142,8 +139,7 @@ public class ApiDialog extends BaseDialog {
                 int idx = 0;
                 if (liveHistory.contains(current))
                     idx = liveHistory.indexOf(current);
-                ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());              
-                //dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
+                ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
                 dialog.setTip("历史直播列表");
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
@@ -161,6 +157,9 @@ public class ApiDialog extends BaseDialog {
                 dialog.show();
             }
         });
+        
+        
+        
         findViewById(R.id.storagePermission).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
