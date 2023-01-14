@@ -43,6 +43,7 @@ cp $CURRENT_DIR/DIY2/J/设置/SettingActivity.java    $CURRENT_DIR/$DIR/app/src/
 //首页顶部修改
 cp $CURRENT_DIR/DIY2/J/首页/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
 cp $CURRENT_DIR/DIY2/J/首页/activity_home.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
+
 cp $CURRENT_DIR/DIY2/J/首页/hm_wifi_no.png    $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi_no.png
 cp $CURRENT_DIR/DIY2/J/首页/hm_search.png     $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_search.png
 cp $CURRENT_DIR/DIY2/J/首页/hm_wifi.png       $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi.png
@@ -91,10 +92,6 @@ mv $CURRENT_DIR/DIY2/图标1.png $CURRENT_DIR/$DIR/app/src/main/res/drawable-xxx
 
 #背景修改
 cp $CURRENT_DIR/DIY2/17.png $CURRENT_DIR/$DIR/app/src/main/res/drawable/app_bg.png
-
-#名称修改
-cp $CURRENT_DIR/DIY2/J/activity_home.xml   $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
-
 
 #首页多排
 sed -i 's/380+200/340+200/g' $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java 
