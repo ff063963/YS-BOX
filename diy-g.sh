@@ -39,7 +39,7 @@ cp $CURRENT_DIR/DIY2/J/设置/ApiDialog.java           $CURRENT_DIR/$DIR/app/src
 cp $CURRENT_DIR/DIY2/J/设置/dialog_api.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_api.xml
 cp $CURRENT_DIR/DIY2/J/设置/LivePlayActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/LivePlayActivity.java
 cp $CURRENT_DIR/DIY2/J/设置/SettingActivity.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/SettingActivity.java
-cp $CURRENT_DIR/DIY2/J/build.gradle    $CURRENT_DIR/$DIR/app/build.gradle
+#cp $CURRENT_DIR/DIY2/J/build.gradle    $CURRENT_DIR/$DIR/app/build.gradle
 
 
 //搜索修改
