@@ -239,11 +239,7 @@ public class HomeActivity extends BaseActivity {
                 return true;
             }
         });
-        setLoadSir(this.contentLayout);
-        //mHandler.postDelayed(mFindFocus, 500);
-    }
-  
-     // Button : Wifi >> Go into Android Wifi Settings -------------
+         // Button : Wifi >> Go into Android Wifi Settings -------------
         tvWifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -272,6 +268,11 @@ public class HomeActivity extends BaseActivity {
                 return true;
             }
         });
+        setLoadSir(this.contentLayout);
+        //mHandler.postDelayed(mFindFocus, 500);
+    }
+  
+    
 
     private void initViewModel() {
         sourceViewModel = new ViewModelProvider(this).get(SourceViewModel.class);
