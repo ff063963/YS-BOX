@@ -251,7 +251,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String api) {
-                        Hawk.put(HawkConfig.API_URL,"" );
+                        Hawk.put(HawkConfig.API_URL, api );
                         tvApi.setText("https://TVBox.接口");
                         dialog.dismiss();
                     }
