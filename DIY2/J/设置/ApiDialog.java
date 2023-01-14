@@ -114,7 +114,8 @@ public class ApiDialog extends BaseDialog {
                 if (history.contains(current))
                     idx = history.indexOf(current);
                 ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
-                dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_list));
+                //dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_list));
+                dialog.setTip("历史配置列表");
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String value) {
@@ -141,8 +142,9 @@ public class ApiDialog extends BaseDialog {
                 int idx = 0;
                 if (liveHistory.contains(current))
                     idx = liveHistory.indexOf(current);
-                ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
-                dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
+                ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());              
+                //dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
+                dialog.setTip("历史直播列表");
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String liveURL) {
