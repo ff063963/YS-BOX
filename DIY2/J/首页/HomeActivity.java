@@ -68,6 +68,8 @@ import java.util.Date;
 import java.util.List;
 
 import me.jessyan.autosize.utils.AutoSizeUtils;
+//图片
+import android.widget.ImageView;
 
 public class HomeActivity extends BaseActivity {
     private LinearLayout topLayout;
