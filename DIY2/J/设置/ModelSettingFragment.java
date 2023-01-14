@@ -237,7 +237,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 ArrayList<String> history = Hawk.get(HawkConfig.API_HISTORY, new ArrayList<String>());
               if (history.isEmpty())
                     return;
-                String current = Hawk.get(HawkConfig.API_URL, "https://TVBox.测试");               
+                String current = Hawk.get(HawkConfig.API_URL, "");               
              if (current.isEmpty()) {
         //    callback.error("-1");
             return;
@@ -251,7 +251,7 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String api) {
-                        Hawk.put(HawkConfig.API_URL,api );
+                        Hawk.put(HawkConfig.API_URL,"" );
                         tvApi.setText("https://TVBox.接口");
                         dialog.dismiss();
                     }
