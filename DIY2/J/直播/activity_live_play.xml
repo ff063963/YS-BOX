@@ -652,6 +652,7 @@
 		android:layout_marginTop="40px"
 		android:layout_marginRight="50px"
 		android:minWidth="270px">
+	
 		<ImageView
 			android:id="@+id/iv_back_bg"
 			android:layout_width="90px"
@@ -662,8 +663,10 @@
 			android:layout_alignParentLeft="true"
 			android:layout_alignParentBottom="true" />
 
+
 		<TextView
 			android:id="@+id/tv_right_top_epg_name"
+		  
 			android:layout_width="170px"
 			android:layout_height="wrap_content"
 			android:layout_alignParentTop="true"
@@ -724,6 +727,7 @@
 		android:layout_marginRight="25mm"
 
 		android:minWidth="270px">
+		<!--	
 		<ImageView
 			android:id="@+id/iv_circle_bg"
 			android:visibility="gone"					   
@@ -734,7 +738,7 @@
 			android:layout_alignParentTop="true"
 			android:layout_alignParentRight="true"
 			android:layout_alignParentBottom="true" />
-	<!--
+
 		<ImageView
 			android:layout_width="@dimen/vs_40"
 			android:layout_height="@dimen/vs_40"
@@ -747,6 +751,7 @@
 
 		<com.github.tvbox.osc.ui.tv.widget.MarqueeTextView
 			android:id="@+id/tv_right_top_channel_name"
+			android:visibility="gone"						   
 			android:layout_width="@dimen/vs_150"
 			android:layout_height="wrap_content"
 			android:layout_alignParentTop="true"
