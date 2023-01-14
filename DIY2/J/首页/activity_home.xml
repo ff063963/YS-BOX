@@ -82,7 +82,7 @@
             android:focusable="true"
             android:nextFocusLeft="@id/tvName"
             android:src="@drawable/hm_wifi_no" />
-
+<!--
        <ImageView
             android:id="@+id/tvFind"
             android:layout_width="@dimen/vs_40"
@@ -96,7 +96,7 @@
             android:focusable="true"
             android:src="@drawable/hm_search" />
 
-       
+   -->    
 
         <TextView
             android:id="@+id/tvDate"
