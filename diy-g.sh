@@ -41,13 +41,14 @@ cp $CURRENT_DIR/DIY2/J/设置/SettingActivity.java    $CURRENT_DIR/$DIR/app/src/
 #cp $CURRENT_DIR/DIY2/J/build.gradle    $CURRENT_DIR/$DIR/app/build.gradle
 
 //首页顶部修改
+
 cp $CURRENT_DIR/DIY2/J/首页/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
 cp $CURRENT_DIR/DIY2/J/首页/activity_home.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
 
-cp $CURRENT_DIR/DIY2/J/首页/hm_wifi_no.png    $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi_no.png
-cp $CURRENT_DIR/DIY2/J/首页/hm_search.png     $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_search.png
-cp $CURRENT_DIR/DIY2/J/首页/hm_wifi.png       $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi.png
-cp $CURRENT_DIR/DIY2/J/首页/hm_settings.png   $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_settings.png
+mv $CURRENT_DIR/DIY2/J/首页/hm_wifi_no.png    $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi_no.png
+mv $CURRENT_DIR/DIY2/J/首页/hm_search.png     $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_search.png
+mv $CURRENT_DIR/DIY2/J/首页/hm_wifi.png       $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi.png
+mv $CURRENT_DIR/DIY2/J/首页/hm_settings.png   $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_settings.png
 cp $CURRENT_DIR/DIY2/J/首页/button_home_select.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_home_select.xml
 //搜索修改
 cp $CURRENT_DIR/DIY2/J/搜索/dialog_checkbox_search.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/dialog_checkbox_search.xml
