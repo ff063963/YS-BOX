@@ -132,8 +132,9 @@ public class ApiConfig {
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
         // Embedded Source : Update in Strings.xml if required
+        //内置地址
         //String apiUrl = Hawk.get(HawkConfig.API_URL, HomeActivity.getRes().getString(R.string.app_source));
-        String apiUrl = Hawk.get(HawkConfig.API_URL, ""));
+    String apiUrl = Hawk.get(HawkConfig.API_URL, "");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
