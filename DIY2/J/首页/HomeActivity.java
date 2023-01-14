@@ -94,8 +94,8 @@ public class HomeActivity extends BaseActivity {
     private long mExitTime = 0;
   //添加图片 tvWifi tvFind tvMenu
     private ImageView tvWifi;
-    private ImageView tvFind;
-    private ImageView tvMenu;
+    //private ImageView tvFind;
+    //private ImageView tvMenu;
   
     private Runnable mRunnable = new Runnable() {
         @SuppressLint({"DefaultLocale", "SetTextI18n"})
@@ -135,7 +135,7 @@ public class HomeActivity extends BaseActivity {
     private void initView() {
         this.tvWifi = findViewById(R.id.tvWifi);
         //this.tvFind = findViewById(R.id.tvFind);
-        this.tvMenu = findViewById(R.id.tvMenu);
+        //this.tvMenu = findViewById(R.id.tvMenu);
       
         this.topLayout = findViewById(R.id.topLayout);
         this.tvDate = findViewById(R.id.tvDate);
@@ -250,6 +250,7 @@ public class HomeActivity extends BaseActivity {
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
             }
         });
+        /*
         // Button : Search --------------------------------------------
         tvFind.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,6 +265,7 @@ public class HomeActivity extends BaseActivity {
                 jumpActivity(SettingActivity.class);
             }
         });
+    
         // Button : Settings >> To go into App Settings ----------------
         tvMenu.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -272,6 +274,7 @@ public class HomeActivity extends BaseActivity {
                 return true;
             }
         });
+            */
         setLoadSir(this.contentLayout);
         //mHandler.postDelayed(mFindFocus, 500);
     }
@@ -628,8 +631,8 @@ public class HomeActivity extends BaseActivity {
             animatorSet.setDuration(200);
             animatorSet.start();
             tvWifi.setFocusable(false);
-            tvFind.setFocusable(false);
-            tvMenu.setFocusable(false);
+            //tvFind.setFocusable(false);
+           // tvMenu.setFocusable(false);
             return;
         }
         if (!hide && topHide == 1) {
@@ -649,8 +652,8 @@ public class HomeActivity extends BaseActivity {
             animatorSet.start();
 
             tvWifi.setFocusable(true);
-            tvFind.setFocusable(true);
-            tvMenu.setFocusable(true);
+           // tvFind.setFocusable(true);
+          //  tvMenu.setFocusable(true);
             return;
         }
     }
