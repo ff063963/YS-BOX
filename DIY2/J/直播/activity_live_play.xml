@@ -714,6 +714,7 @@
 	<!--右上角动态状态栏-->
 	<RelativeLayout
 		android:layout_gravity="center|right|top"
+		android:visibility="gone"			
 		android:orientation="vertical"
 		android:id="@+id/ll_right_top_loading"
 		android:background="@drawable/shape_user_search"
@@ -725,6 +726,7 @@
 		android:minWidth="270px">
 		<ImageView
 			android:id="@+id/iv_circle_bg"
+			android:visibility="gone"					   
 			android:layout_width="@dimen/vs_40"
 			android:layout_height="@dimen/vs_40"
 			android:layout_marginRight="@dimen/vs_10"
@@ -732,6 +734,7 @@
 			android:layout_alignParentTop="true"
 			android:layout_alignParentRight="true"
 			android:layout_alignParentBottom="true" />
+	<!--
 		<ImageView
 			android:layout_width="@dimen/vs_40"
 			android:layout_height="@dimen/vs_40"
@@ -740,6 +743,7 @@
 			android:layout_alignTop="@+id/iv_circle_bg"
 			android:layout_alignRight="@+id/iv_circle_bg"
 			android:layout_alignBottom="@+id/iv_circle_bg" />
+-->
 
 		<com.github.tvbox.osc.ui.tv.widget.MarqueeTextView
 			android:id="@+id/tv_right_top_channel_name"
