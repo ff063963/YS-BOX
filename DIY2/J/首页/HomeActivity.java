@@ -70,7 +70,9 @@ import java.util.List;
 import me.jessyan.autosize.utils.AutoSizeUtils;
 //图片
 import android.widget.ImageView;
-
+//
+import android.provider.Settings;
+import android.net.Uri;
 public class HomeActivity extends BaseActivity {
     private LinearLayout topLayout;
     private LinearLayout contentLayout;
