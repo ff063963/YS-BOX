@@ -134,7 +134,7 @@ public class HomeActivity extends BaseActivity {
 
     private void initView() {
         this.tvWifi = findViewById(R.id.tvWifi);
-        this.tvFind = findViewById(R.id.tvFind);
+        //this.tvFind = findViewById(R.id.tvFind);
         this.tvMenu = findViewById(R.id.tvMenu);
       
         this.topLayout = findViewById(R.id.topLayout);
