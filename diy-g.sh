@@ -55,7 +55,7 @@ cp $CURRENT_DIR/DIY2/J/小窗/activity_detail.xml            $CURRENT_DIR/$DIR/a
 cp $CURRENT_DIR/DIY2/J/fragment_grid.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_grid.xml
 
 //直播修改
-cp $CURRENT_DIR/DIY2/J/直播/activity_live_play.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_live_play.xml
+#cp $CURRENT_DIR/DIY2/J/直播/activity_live_play.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_live_play.xml
 
 //增加参数
 cp $CURRENT_DIR/DIY2/J/dimens.xml         $CURRENT_DIR/$DIR/app/src/main/res/values/dimens.xml
