@@ -402,7 +402,7 @@
 		android:id="@+id/ll_epg"
 		android:paddingBottom="5dp"
 		android:layout_width="@dimen/vs_960"
-		android:layout_height="@dimen/vs_100">
+		android:layout_height="@dimen/vs_160">
 		<View
 			android:id="@+id/view_bg"
 			android:background="@drawable/shape_user_focus"
@@ -431,7 +431,7 @@
 			android:layout_gravity="center"
 			android:layout_marginLeft="20mm"
 			android:layout_marginTop="5mm"
-			android:layout_marginBottom="5dp"
+			android:layout_marginBottom="-14dp"
 			android:ellipsize="marquee"
 			android:gravity="center"
 			android:marqueeRepeatLimit="marquee_forever"
@@ -442,7 +442,7 @@
 			android:text="10"
 			android:visibility="gone"
 			android:textColor="@color/color_FFFFFF"
-			android:textSize="@dimen/ts_100"
+			android:textSize="@dimen/ts_90"
 			android:textStyle="bold" />
 			<FrameLayout
 				android:layout_width="@dimen/vs_220"
