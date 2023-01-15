@@ -491,7 +491,7 @@
 		<com.github.tvbox.osc.ui.tv.widget.MarqueeTextView
 			android:id="@+id/tv_channel_bar_name"
 			android:layout_width="@dimen/vs_200"
-			android:layout_height="@dimen/vs_60"
+			android:layout_height="wrap_content"
 			android:layout_alignStart="@+id/tv_channel_bottom_number"
 			android:layout_alignLeft="@+id/tv_channel_bottom_number"
 			android:layout_alignEnd="@+id/tv_channel_bottom_number"
