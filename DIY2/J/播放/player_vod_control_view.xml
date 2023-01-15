@@ -102,13 +102,20 @@
         android:layout_gravity="right"
         android:layout_marginRight="@dimen/vs_30"
         android:paddingTop="@dimen/vs_10"  
-        android:orientation="horizontal">
+        android:orientation="vertical">
         
-        <TextView
-            android:id="@+id/tv_play_load_net_speed_right_top"
+ <LinearLayout
+                android:id="@+id/tv_speed_top"
+                android:layout_width="@dimen/vs_120"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:tag="tv_speed_top">
+
+                <TextView
+                    android:id="@+id/tv_play_speed_top"
                     android:layout_width="@dimen/vs_70"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
+                    android:layout_gravity="bottom|center"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
                     android:gravity="right"
@@ -116,30 +123,30 @@
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="3"
-                    android:tag="play_speed_top_hide"
+                    android:tag="play_speed_top"
                     android:text="Speed"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
-                    android:textStyle="bold" />  
-<!--网络速度-->
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:id="@+id/tv_MPBS_top_hide"
+                    android:id="@+id/tv_MPBS_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|right"
-                    android:layout_marginStart="@dimen/vs_10"
-                    android:layout_marginLeft="@dimen/vs_10"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/vs_5"
+                    android:layout_marginLeft="@dimen/vs_5"
                     android:gravity="right"
                     android:shadowColor="@color/color_FF000000"
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="3"
-                    android:text=""
+                    android:text="Mbps"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_16"
-                    android:textStyle="bold" />              
+                    android:textStyle="bold" />
             </LinearLayout>
-
+  </LinearLayout>
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
         android:layout_width="match_parent"
@@ -164,7 +171,7 @@
     <LinearLayout
         android:id="@+id/bottom_container"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/vs_230"
+        android:layout_height="@dimen/vs_270"
         android:layout_gravity="bottom"
         android:background="@drawable/box_controller_bottom_bg"
         android:gravity="center_vertical"
