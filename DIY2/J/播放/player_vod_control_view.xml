@@ -118,7 +118,7 @@
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="3"
-                    android:tag="play_speed_top_hide"
+                    android:tag="vod_control_pause_time"
                     android:text="Speed"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
@@ -136,7 +136,7 @@
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="3"
-                    android:text="Mbps"
+                    android:text="0Kb/s"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_16"
                     android:textStyle="bold" />
@@ -247,7 +247,7 @@
                 android:shadowDy="0"
                 android:shadowRadius="3"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_24"
+                android:textSize="@dimen/vs_20"
                 android:textStyle="normal"
                 android:visibility="visible" />
            <TextView
@@ -265,7 +265,7 @@
                 android:shadowRadius="3"
                 android:text="Ends at 00:00 AM"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_24"
+                android:textSize="@dimen/vs_20"
                 android:textStyle="normal"
                 android:visibility="visible" />
             </LinearLayout>
@@ -552,7 +552,7 @@
                     android:textSize="@dimen/ts_24" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/vs_1"
                     android:layout_height="wrap_content"
                     android:text="|"
                     android:textColor="@color/color_FFFFFF"
@@ -647,75 +647,44 @@
         android:tag="vod_control_pause"
         android:visibility="gone"
         tools:visibility="visible">
-<!---
+
         <LinearLayout
-                      
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginStart="@dimen/vs_30"
-            android:layout_marginLeft="@dimen/vs_30"
-            android:layout_marginTop="@dimen/vs_10"
-            android:orientation="vertical">
-
-
-      <TextView
-                        android:id="@+id/tv_info_name"
-                        android:layout_width="600dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/vs_40"
-                        android:maxWidth="@dimen/vs_640"
-                        android:maxLines="1"
-                        android:singleLine="false"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_24" />
-
-            <TextView
-                android:id="@+id/tv_info_name"
-                      android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="@dimen/vs_20"
-                        android:maxWidth="@dimen/vs_960"
-                            android:singleLine="true"
-                            android:ellipsize="marquee"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true"
-                        android:maxLines="1"                  
-                        android:text="http://"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/ts_24" />
-
-        </LinearLayout>
--->
-        <LinearLayout
-            android:layout_width="@dimen/vs_280"
-            android:layout_height="@dimen/vs_200"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@drawable/shape_user_focus"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
+            android:layout_marginStart="@dimen/vs_20"
+            android:layout_marginLeft="@dimen/vs_20"
+            android:layout_marginEnd="@dimen/vs_10"
+            android:layout_marginRight="@dimen/vs_10"
             android:gravity="center"
             android:orientation="vertical">
+        
+
 
             <ImageView
-                android:layout_width="@dimen/vs_60"
-                android:layout_height="@dimen/vs_60"
-                android:layout_gravity="center"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:src="@drawable/icon_play" />
+            android:layout_width="@dimen/vs_60"
+            android:layout_height="@dimen/vs_60"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/vs_20"
+            android:layout_marginRight="@dimen/vs_20"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/icon_play" />
 
             <TextView
                 android:id="@+id/tv_pause_progress_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/vs_20"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:tag="vod_control_pause_t"
+                android:shadowColor="@color/color_000000_60"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_30"
+                android:textSize="@dimen/ts_26"
+                android:textStyle="bold"
                 tools:text="100" />
         </LinearLayout>
 
