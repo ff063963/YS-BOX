@@ -648,7 +648,7 @@
         tools:visibility="visible">
 
  <LinearLayout
-            android:id="@+id/ll_pause"
+  
             android:layout_width="wrap_content"
             android:layout_height="@dimen/vs_70"
             android:layout_gravity="end"
