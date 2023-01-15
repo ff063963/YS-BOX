@@ -122,8 +122,6 @@
                     android:text="Speed"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
-                    android:textStyle="bold" />
-
                 <TextView
                     android:id="@+id/tv_MPBS_top_hide"
                     android:layout_width="wrap_content"
@@ -139,7 +137,8 @@
                     android:text=""
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_16"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" 
+                    android:orientation="horizontal"  />
             </LinearLayout>
 
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
@@ -552,7 +551,7 @@
                     android:textSize="@dimen/ts_24" />
 
                 <TextView
-                    android:layout_width="@dimen/vs_10"
+                    android:layout_width="@dimen/vs_5"
                     android:layout_height="wrap_content"
                     android:text="|"
                     android:textColor="@color/color_FFFFFF"
@@ -648,28 +647,31 @@
         android:visibility="gone"
         tools:visibility="visible">
 
-        <LinearLayout
+ <LinearLayout
+            android:id="@+id/ll_pause"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/vs_70"
             android:layout_gravity="end"
             android:layout_marginTop="@dimen/vs_80"
             android:layout_marginEnd="@dimen/vs_50"
             android:layout_marginRight="@dimen/vs_50"
-            android:background="@drawable/shape_user_focus"
+            android:background="@drawable/shape_user_pause"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:gravity="center|right"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="@dimen/vs_60"
-                android:layout_height="@dimen/vs_60"
-                android:layout_gravity="center"
-                android:layout_marginEnd="@dimen/vs_20"
-                android:layout_marginRight="@dimen/vs_20"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:src="@drawable/icon_play" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/vs_20"
+                android:layout_marginLeft="@dimen/vs_20"
+                android:layout_marginEnd="@dimen/vs_10"
+                android:layout_marginRight="@dimen/vs_10"
+                android:gravity="center"
+                android:orientation="vertical">
+                    
             <TextView
                 android:id="@+id/tv_pause_progress_text"
                     android:layout_width="wrap_content"
@@ -686,6 +688,15 @@
                     android:textSize="@dimen/ts_26"
                     android:textStyle="bold"
                     tools:text="100" />
+              <ImageView
+                android:layout_width="@dimen/vs_60"
+                android:layout_height="@dimen/vs_60"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/vs_20"
+                android:layout_marginRight="@dimen/vs_20"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/icon_play" />
         </LinearLayout>
 
     </FrameLayout>
