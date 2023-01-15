@@ -552,7 +552,7 @@
                     android:textSize="@dimen/ts_24" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/vs_10"
                     android:layout_height="wrap_content"
                     android:text="|"
                     android:textColor="@color/color_FFFFFF"
@@ -667,21 +667,25 @@
                 android:layout_marginEnd="@dimen/vs_20"
                 android:layout_marginRight="@dimen/vs_20"
                 android:focusable="false"
-                android:focusableInTouchMode="false
+                android:focusableInTouchMode="false"
                 android:src="@drawable/icon_play" />
 
             <TextView
                 android:id="@+id/tv_pause_progress_text"
-               android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/vs_20"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:tag="vod_control_pause_t"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_30"
-                tools:text="100" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:shadowColor="@color/color_000000_60"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:tag="vod_control_pause_t"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ts_26"
+                    android:textStyle="bold"
+                    tools:text="100" />
         </LinearLayout>
 
     </FrameLayout>
