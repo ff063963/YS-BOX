@@ -177,7 +177,7 @@
         android:visibility="gone"
         tools:visibility="visible">
         
-        
+        <!--开始时间-->
         <LinearLayout
             android:id="@+id/ll_sys_time"
             android:layout_width="match_parent"
@@ -223,7 +223,7 @@
                 android:visibility="visible" />
          </LinearLayout>
         
-        
+     <!--结束时间-->   
           <LinearLayout
             android:id="@+id/ll_finish_at"
             android:layout_width="match_parent"
@@ -265,7 +265,7 @@
                 android:shadowRadius="3"
                 android:text="Ends at 00:00 AM"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_24"
+                android:textSize="@dimen/vs_20"
                 android:textStyle="normal"
                 android:visibility="visible" />
             </LinearLayout>
@@ -687,7 +687,7 @@
                 android:layout_marginEnd="@dimen/vs_20"
                 android:layout_marginRight="@dimen/vs_20"
                 android:focusable="false"
-                android:focusableInTouchMode="false
+                android:focusableInTouchMode="false"
                 android:src="@drawable/icon_play" />
         </LinearLayout>
 
