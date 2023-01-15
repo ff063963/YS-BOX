@@ -660,7 +660,15 @@
             android:focusableInTouchMode="false"
             android:gravity="center|right"
             android:orientation="horizontal">
-
+            <ImageView
+                android:layout_width="@dimen/vs_60"
+                android:layout_height="@dimen/vs_60"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/vs_20"
+                android:layout_marginRight="@dimen/vs_20"
+                android:focusable="false"
+                android:focusableInTouchMode="false
+                android:src="@drawable/icon_play" />
 
             <TextView
                 android:id="@+id/tv_pause_progress_text"
@@ -678,17 +686,6 @@
                     android:textSize="@dimen/ts_26"
                     android:textStyle="bold"
                     tools:text="100" />
-            
-             <ImageView
-                android:layout_width="@dimen/vs_60"
-                android:layout_height="@dimen/vs_60"
-                android:layout_gravity="center"
-                android:layout_marginEnd="@dimen/vs_20"
-                android:layout_marginRight="@dimen/vs_20"
-                android:focusable="false"
-                android:focusableInTouchMode="false
-                android:src="@drawable/icon_play" />
-            
         </LinearLayout>
 
     </FrameLayout>
