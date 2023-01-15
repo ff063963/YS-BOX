@@ -446,7 +446,7 @@
 			android:textStyle="bold" />
 			<FrameLayout
 				android:layout_width="@dimen/vs_220"
-				android:layout_height="@dimen/vs_60"
+				android:layout_height="@dimen/vs_50"
 				android:layout_marginStart="@dimen/vs_10"
 				android:layout_marginLeft="@dimen/vs_10"
 				android:layout_marginEnd="@dimen/vs_10"
@@ -469,7 +469,7 @@
 					android:ellipsize='marquee'
 					android:singleLine="true"
 					android:textColor="@android:color/white"
-					android:textSize="@dimen/vs_60"
+					android:textSize="@dimen/vs_0"
 					android:textStyle="bold"
 					tools:ignore="EllipsizeMaxLines" />
 		
@@ -501,14 +501,14 @@
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="5dp"
 			android:layout_marginBottom="5dp"							   
-			android:layout_marginTop="@dimen/vs_10"
+			android:layout_marginTop="@dimen/vs_5"
 			android:ellipsize="marquee"
 			android:gravity="center"
 			android:paddingTop="0dp"
 			android:singleLine="true"
 			android:text="CCTV 高清"
 			android:textColor="@color/color_FFFFFF"
-			android:textSize="@dimen/ts_34" />
+			android:textSize="@dimen/ts_30" />
 
 		</LinearLayout>
 		<TextView
