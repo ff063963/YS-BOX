@@ -15,9 +15,7 @@
         android:orientation="vertical"
         android:visibility="gone"
         tools:visibility="visible">       
-
-
-
+     
       <TextView
             android:id="@+id/play_speed"
             android:layout_width="wrap_content"
@@ -46,11 +44,8 @@
         android:visibility="gone"  
         tools:visibility="visible"
         android:orientation="vertical">
-
    </LinearLayout>
-    
-   
-    
+     
 <LinearLayout
             android:id="@+id/tv_top_l_container"
             android:layout_width="wrap_content"
@@ -93,11 +88,7 @@
 
     </LinearLayout>
 
-    
-
-    
-    
-    
+  
     
     <LinearLayout
         android:id="@+id/tv_top_r_container"
@@ -247,7 +238,7 @@
                 android:shadowRadius="3"
                 android:text="Ends at 00:00 AM"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_20"
+                android:textSize="@dimen/vs_24"
                 android:textStyle="normal"
                 android:visibility="visible" />
             </LinearLayout>
