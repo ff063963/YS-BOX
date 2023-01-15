@@ -25,7 +25,7 @@ cp $CURRENT_DIR/DIY2/J/播放/player_vod_control_view.xml    $CURRENT_DIR/$DIR/a
 cp $CURRENT_DIR/DIY2/J/播放/VodController.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java
 cp $CURRENT_DIR/DIY2/J/播放/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/play_mobile_center_shape.xml
 cp $CURRENT_DIR/DIY2/J/播放/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
-cp $CURRENT_DIR/DIY2/J/播放/box_controller_bottom_bg       $CURRENT_DIR/$DIR/app/src/main/res/drawable/box_controller_bottom_bg
+cp $CURRENT_DIR/DIY2/J/播放/box_controller_bottom_bg.xml       $CURRENT_DIR/$DIR/app/src/main/res/drawable/box_controller_bottom_bg.xml
 //设置界面
 cp $CURRENT_DIR/DIY2/J/设置/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
 cp $CURRENT_DIR/DIY2/J/设置/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
@@ -41,10 +41,8 @@ cp $CURRENT_DIR/DIY2/J/设置/SettingActivity.java    $CURRENT_DIR/$DIR/app/src/
 #cp $CURRENT_DIR/DIY2/J/build.gradle    $CURRENT_DIR/$DIR/app/build.gradle
 
 //首页顶部修改
-
 cp $CURRENT_DIR/DIY2/J/首页/HomeActivity.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/HomeActivity.java
 cp $CURRENT_DIR/DIY2/J/首页/activity_home.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_home.xml
-
 mv $CURRENT_DIR/DIY2/J/首页/hm_wifi_no.png    $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi_no.png
 mv $CURRENT_DIR/DIY2/J/首页/hm_search.png     $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_search.png
 mv $CURRENT_DIR/DIY2/J/首页/hm_wifi.png       $CURRENT_DIR/$DIR/app/src/main/res/drawable/hm_wifi.png
