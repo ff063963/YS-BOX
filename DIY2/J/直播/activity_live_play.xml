@@ -503,7 +503,7 @@
 			android:layout_marginLeft="5dp"
 			android:layout_marginEnd="5dp"
 			android:layout_marginRight="5dp"
-			android:layout_marginBottom="@dimen/vs_0"							   
+			android:layout_marginBottom="0dp"							   
 			android:layout_marginTop="@dimen/vs_5"
 			android:ellipsize="marquee"
 			android:gravity="center"
