@@ -649,16 +649,14 @@
         tools:visibility="visible">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+       android:layout_width="@dimen/vs_280"
+            android:layout_height="@dimen/vs_200"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/vs_20"
-            android:layout_marginLeft="@dimen/vs_20"
-            android:layout_marginEnd="@dimen/vs_10"
-            android:layout_marginRight="@dimen/vs_10"
+            android:background="@drawable/shape_user_focus"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:gravity="center"
             android:orientation="vertical">
-        
 
 
             <ImageView
