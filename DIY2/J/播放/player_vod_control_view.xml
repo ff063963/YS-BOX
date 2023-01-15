@@ -648,7 +648,7 @@
         tools:visibility="visible">
 
  <LinearLayout
-         android:id="@+id/ll_pause"
+
             android:layout_width="wrap_content"
             android:layout_height="@dimen/vs_70"
             android:layout_gravity="end"
@@ -661,16 +661,6 @@
             android:gravity="center|right"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginStart="@dimen/vs_20"
-                android:layout_marginLeft="@dimen/vs_20"
-                android:layout_marginEnd="@dimen/vs_10"
-                android:layout_marginRight="@dimen/vs_10"
-                android:gravity="center"
-                android:orientation="vertical">
                     
             <TextView
                 android:id="@+id/tv_pause_progress_text"
@@ -688,7 +678,7 @@
                     android:textSize="@dimen/ts_26"
                     android:textStyle="bold"
                     tools:text="100" />
-          </LinearLayout>
+     
               <ImageView
                 android:layout_width="@dimen/vs_60"
                 android:layout_height="@dimen/vs_60"
