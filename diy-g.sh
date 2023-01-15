@@ -57,7 +57,7 @@ cp $CURRENT_DIR/DIY2/J/搜索/button_dialog_main.xml                $CURRENT_DIR
 cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
 
 //增加字体
-mv $CURRENT_DIR/DIY2/J/字体/advent_pro_extralight.ttf     $CURRENT_DIR/$DIR/app/src/main/res/font/advent_pro_extralight.ttf
+cp $CURRENT_DIR/DIY2/J/字体/advent_pro_extralight.ttf     $CURRENT_DIR/$DIR/app/src/main/res/font/advent_pro_extralight.ttf
 //小窗修改
 cp $CURRENT_DIR/DIY2/J/小窗/activity_detail.xml            $CURRENT_DIR/$DIR/app/src/main/res/layout/activity_detail.xml
 
