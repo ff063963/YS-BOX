@@ -783,7 +783,7 @@
 			android:text=""
 			tools:text="0Kb/s"
 			android:textColor="#FFFCFFFF"
-			android:textSize="@dimen/vs_20" />
+			android:textSize="@dimen/vs_0" />
 	</RelativeLayout>
 
 
