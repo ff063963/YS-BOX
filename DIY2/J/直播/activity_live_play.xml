@@ -456,7 +456,7 @@
 				>
 				<FrameLayout
 					android:id="@+id/live_icon_null_bg"
-					android:layout_width="@dimen/vs_180"
+					android:layout_width="@dimen/vs_100"
 					android:layout_height="@dimen/vs_60"
 					android:layout_gravity="center">
 				</FrameLayout>
@@ -465,14 +465,12 @@
 					android:id="@+id/live_icon_null_text"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:layout_marginTop="@dimen/vs_0"
-					android:layout_marginBottom="@dimen/vs_10"			  
 					android:layout_gravity="center"
 					android:maxLines="1"
 					android:ellipsize='marquee'
 					android:singleLine="true"
 					android:textColor="@android:color/white"
-					android:textSize="@dimen/vs_50"
+					android:textSize="@dimen/vs_40"
 					android:textStyle="bold"
 					tools:ignore="EllipsizeMaxLines" />
 		
