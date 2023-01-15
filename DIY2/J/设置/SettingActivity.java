@@ -50,7 +50,7 @@ public class SettingActivity extends BaseActivity {
     private int dnsOpt;
 //23.1.7 taka
     private String currentLive;
-    
+    private String currentEPG;    
     @Override
     protected int getLayoutResID() {
         return R.layout.activity_setting;
@@ -112,6 +112,7 @@ public class SettingActivity extends BaseActivity {
     private void initData() {
         currentApi = Hawk.get(HawkConfig.API_URL, "");
         currentLive = Hawk.get(HawkConfig.LIVE_URL, "");
+        currentEPG = Hawk.get(HawkConfig.EPG_URL, "");
         homeSourceKey = ApiConfig.get().getHomeSourceBean().getKey();
         homeRec = Hawk.get(HawkConfig.HOME_REC, 0);
         dnsOpt = Hawk.get(HawkConfig.DOH_URL, 0);
@@ -186,10 +187,12 @@ public class SettingActivity extends BaseActivity {
             
                 !currentApi.equals(Hawk.get(HawkConfig.API_URL, "")) || 
                 !currentLive.equals(Hawk.get(HawkConfig.LIVE_URL, "")) ||
+            
+                !currentEPG.equals(Hawk.get(HawkConfig.EPG_URL, "")) ||
                 homeRec != Hawk.get(HawkConfig.HOME_REC, 0) ||
                 dnsOpt != Hawk.get(HawkConfig.DOH_URL, 0)) {
             AppManager.getInstance().finishAllActivity();
-            if (currentApi.equals(Hawk.get(HawkConfig.API_URL, "")) & (currentLive.equals(Hawk.get(HawkConfig.LIVE_URL, "")))) {
+            if (currentApi.equals(Hawk.get(HawkConfig.API_URL, "")) & currentEPG.equals(Hawk.get(HawkConfig.EPG_URL, "")) & (currentLive.equals(Hawk.get(HawkConfig.LIVE_URL, "")))) {
    
                 Bundle bundle = new Bundle();
                 bundle.putBoolean("useCache", true);
