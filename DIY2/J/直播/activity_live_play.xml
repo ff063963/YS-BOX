@@ -460,6 +460,7 @@
 					android:layout_height="@dimen/vs_60"
 					android:layout_gravity="center">
 				</FrameLayout>
+			<!--频道序号显示-->
 				<TextView
 					android:id="@+id/live_icon_null_text"
 					android:layout_width="wrap_content"
@@ -510,7 +511,7 @@
 			android:singleLine="true"
 			android:text="CCTV 高清"
 			android:textColor="@color/color_FFFFFF"
-			android:textSize="@dimen/ts_0" />
+			android:textSize="@dimen/ts_10" />
 
 		</LinearLayout>
 		<TextView
