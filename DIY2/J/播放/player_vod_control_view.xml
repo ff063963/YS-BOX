@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
  <LinearLayout
         android:id="@id/center_container"
         android:layout_width="wrap_content"
@@ -15,8 +14,6 @@
         android:orientation="vertical"
         android:visibility="gone"
         tools:visibility="visible">       
-
-
       <TextView
             android:id="@+id/play_speed"
             android:layout_width="wrap_content"
@@ -45,7 +42,6 @@
         android:visibility="gone"  
         tools:visibility="visible"
         android:orientation="vertical">
-
    </LinearLayout>
     
    
@@ -61,7 +57,6 @@
             android:visibility="gone" 
             tools:visibility="visible"
             android:orientation="vertical">
-
             <TextView
                         android:id="@+id/tv_info_name"
                         android:layout_width="wrap_content"
@@ -76,7 +71,6 @@
                         android:text="http://"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/ts_24" />
-
             <TextView
                         android:id="@+id/tv_videosize"
                         android:layout_width="wrap_content"
@@ -89,10 +83,11 @@
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/ts_20"
                         tools:text="100" />
-
     </LinearLayout>
-
-   
+    
+    
+    
+    
     
     <LinearLayout
         android:id="@+id/tv_top_r_container"
@@ -105,10 +100,8 @@
         android:layout_marginRight="@dimen/vs_30"
         android:paddingTop="@dimen/vs_10"  
         android:orientation="vertical">
-
-
-
-       <TextView
+        
+        <TextView
             android:id="@+id/tv_play_load_net_speed_right_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,9 +115,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/ts_20" />
     </LinearLayout>
-
           
-
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
         android:layout_width="match_parent"
@@ -139,13 +130,12 @@
         android:textColor="#ffffff"
         android:textSize="16sp"
         android:textStyle="bold"/>
-
     <LinearLayout
         android:id="@+id/bottom_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@drawable/box_controller_bottom_bg"
+        android:background="@drawable/shape_dialog_filter_bg"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="@dimen/vs_20"
@@ -154,36 +144,26 @@
         android:paddingBottom="@dimen/vs_10"
         android:visibility="gone"
         tools:visibility="visible">
-        
-        
+
         <LinearLayout
-            android:id="@+id/ll_sys_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:gravity="left"
+            android:layout_marginBottom="@dimen/vs_10"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_weight="1"
-                android:fontFamily="@font/advent_pro_extralight"
-                android:gravity="left"
-                android:maxLines="1"
-                android:paddingLeft="@dimen/vs_50"
-                android:shadowColor="@color/color_FF000000"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="3"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_60"
-                android:textStyle="normal"
-                android:visibility="visible" />
          <TextView
                 android:id="@+id/tv_sys_time"
                 android:layout_width="@dimen/vs_480"
+
+    
+        
+          
+    
+
+        
+    
+    @@ -183,6 +203,35 @@
+  
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:fontFamily="@font/advent_pro_extralight"
@@ -199,38 +179,19 @@
                 android:textSize="@dimen/vs_60"
                 android:textStyle="normal"
                 android:visibility="visible" />
-         </LinearLayout>
-        
-        
-          <LinearLayout
-            android:id="@+id/ll_finish_at"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginBottom="@dimen/vs_5"
-            android:gravity="left"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_weight="1"
-                android:fontFamily="@font/advent_pro_extralight"
-                android:gravity="left"
-                android:maxLines="1"
-                android:paddingLeft="@dimen/vs_50"
-                android:shadowColor="@color/color_FF000000"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="3"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/vs_24"
-                android:textStyle="normal"
-                android:visibility="visible" />
            <TextView
               android:id="@+id/tv_finish_at"
                 android:layout_width="@dimen/vs_480"
+
+    
+        
+          
+    
+
+        
+    
+    @@ -201,6 +250,12 @@
+  
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:fontFamily="@font/advent_pro_extralight"
@@ -246,15 +207,19 @@
                 android:textSize="@dimen/vs_20"
                 android:textStyle="normal"
                 android:visibility="visible" />
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/vs_10"
-            android:orientation="horizontal">
-             
+
             <TextView
                 android:singleLine="true"
+
+    
+          
+            
+    
+
+          
+    
+    
+  
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/vs_5"
@@ -263,7 +228,6 @@
                 android:text="播放"
                 android:textColor="@color/color_FFFFFF"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/play_next"
                 android:singleLine="true"
@@ -277,7 +241,6 @@
                 android:text="下集"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/play_pre"
                 android:singleLine="true"
@@ -334,7 +297,6 @@
                 android:text="刷新"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/play_scale"
                 android:singleLine="true"
@@ -348,9 +310,7 @@
                 android:text="16:9"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
           
-
             <TextView
                 android:id="@+id/play_player"
                 android:singleLine="true"
@@ -364,7 +324,6 @@
                 android:text="系统播放器"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/play_ijk"
                 android:singleLine="true"
@@ -404,7 +363,6 @@
                 android:text="片头片尾"
                 android:textColor="@color/color_FFFFFF"
                 android:textSize="@dimen/ts_20" />
-
             
             <TextView
                 android:id="@+id/play_time_start"
@@ -419,9 +377,7 @@
                 android:text="01:00"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             
-
             <TextView
                 android:id="@+id/play_time_end"
                 android:singleLine="true"
@@ -435,7 +391,6 @@
                 android:text="01:00"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <!--添加片头片尾重置按钮-->
             <TextView
                 android:id="@+id/play_time_reset"
@@ -450,7 +405,6 @@
                 android:text="重置"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/zimu_select"
                 android:singleLine="true"
@@ -464,7 +418,6 @@
                 android:text="字幕"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20" />
-
             <TextView
                 android:id="@+id/audio_track_select"
                 android:layout_width="wrap_content"
@@ -478,7 +431,6 @@
                 android:text="音轨"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_20"/>
-
             <TextView
                 android:id="@+id/landscape_portrait"
                 android:layout_width="wrap_content"
@@ -512,13 +464,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
-
                 <TextView
                     android:id="@+id/curr_time"
                     android:layout_width="wrap_content"
@@ -528,7 +478,6 @@
                     android:text="00:00"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_24" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -537,7 +486,6 @@
                     android:text="/"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_24" />
-
                 <TextView
                     android:id="@+id/total_time"
                     android:layout_width="wrap_content"
@@ -547,15 +495,12 @@
                     android:text="00:00"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_24" />
-
             </LinearLayout>
     
     
             
             
         </LinearLayout>
-
-
         <LinearLayout
             android:id="@+id/parse_root"
             android:layout_width="match_parent"
@@ -564,7 +509,6 @@
             android:orientation="horizontal"
             android:visibility="gone"
             tools:visibility="visible">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -575,7 +519,6 @@
                 android:text="解析"
                 android:textColor="@color/color_FFFFFF"
                 android:textSize="@dimen/ts_20" />
-
             <com.owen.tvrecyclerview.widget.TvRecyclerView
                 android:id="@+id/mGridView"
                 android:layout_width="match_parent"
@@ -586,15 +529,11 @@
                 app:tv_selectedItemIsCentered="true"
                 app:tv_verticalSpacingWithMargins="@dimen/vs_5" />
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/vs_10"
             android:orientation="horizontal">
-
-
             <SeekBar
                 android:id="@+id/seekBar"
                 android:layout_width="0dp"
@@ -613,13 +552,9 @@
                 android:progressDrawable="@drawable/shape_player_control_vod_seek"
                 android:thumb="@drawable/shape_player_control_vod_seek_thumb"
                 android:thumbOffset="@dimen/vs_0" />
-
        
         </LinearLayout>
-
-
     </LinearLayout>
-
     <FrameLayout
         android:id="@+id/tv_pause_container"
         android:layout_width="match_parent"
@@ -637,8 +572,6 @@
             android:layout_marginLeft="@dimen/vs_30"
             android:layout_marginTop="@dimen/vs_10"
             android:orientation="vertical">
-
-
       <TextView
                         android:id="@+id/tv_info_name"
                         android:layout_width="600dp"
@@ -649,7 +582,6 @@
                         android:singleLine="false"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/ts_24" />
-
             <TextView
                 android:id="@+id/tv_info_name"
                       android:layout_width="wrap_content"
@@ -664,7 +596,6 @@
                         android:text="http://"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/ts_24" />
-
         </LinearLayout>
 -->
         <LinearLayout
@@ -676,7 +607,6 @@
             android:focusableInTouchMode="false"
             android:gravity="center"
             android:orientation="vertical">
-
             <ImageView
                 android:layout_width="@dimen/vs_60"
                 android:layout_height="@dimen/vs_60"
@@ -684,7 +614,6 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:src="@drawable/icon_play" />
-
             <TextView
                 android:id="@+id/tv_pause_progress_text"
                 android:layout_width="wrap_content"
@@ -698,9 +627,7 @@
                 android:textSize="@dimen/ts_30"
                 tools:text="100" />
         </LinearLayout>
-
     </FrameLayout>
-
     <TextView
         android:id="@+id/tv_slide_progress_text"
         android:layout_width="@dimen/vs_200"
@@ -716,7 +643,6 @@
         android:textSize="@dimen/ts_30"
         android:visibility="gone"
         tools:text="100" />
-
     <LinearLayout
         android:id="@+id/tv_progress_container"
         android:layout_width="@dimen/vs_280"
@@ -729,7 +655,6 @@
         android:orientation="vertical"
         android:visibility="gone"
         tools:visibility="visible">
-
         <ImageView
             android:id="@+id/tv_progress_icon"
             android:layout_width="@dimen/vs_60"
@@ -737,7 +662,6 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             tools:src="@drawable/icon_back" />
-
         <TextView
             android:id="@+id/tv_progress_text"
             android:layout_width="wrap_content"
@@ -749,9 +673,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/ts_30"
             tools:text="100" />
-
     </LinearLayout>
-
     <ProgressBar
         android:layout_width="@dimen/vs_50"
         android:layout_height="@dimen/vs_50"
@@ -761,7 +683,6 @@
         android:indeterminateOnly="true"
         android:tag="vod_control_loading"
         android:visibility="gone" />
-
    <TextView
         android:id="@+id/tv_play_load_net_speed"
         android:layout_width="wrap_content"
@@ -774,5 +695,4 @@
         android:text="0"
         android:textColor="@color/color_FFFFFF"
         android:textSize="@dimen/ts_20" />
-
 </FrameLayout>
