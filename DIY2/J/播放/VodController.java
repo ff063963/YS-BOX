@@ -218,7 +218,7 @@ public class VodController extends BaseController {
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
             
             mVideoSize.setText( "" + width + " X " + height +"" );
-            finishAt.setText("剩余时间: " + PlayerUtils.stringForTime((int) TimeRemaining) +" 结束时间:" + onlyTimeFormat.format(endTime));
+            finishAt.setText("剩余时间:" + PlayerUtils.stringForTime((int) TimeRemaining) +"  结束时间:" + onlyTimeFormat.format(endTime));
 
             mHandler.postDelayed(this, 1000);
         }
