@@ -855,7 +855,7 @@ public class VodController extends BaseController {
     }
 */
     void updatePlayerCfgView() {
-                 try {
+        try {
             int playerType = mPlayerConfig.getInt("pl");
             // takagen99: Only display loading speed when IJK
             if (playerType == 1) {
@@ -865,7 +865,6 @@ public class VodController extends BaseController {
                 mSpeedHidell.setVisibility(GONE);
                 mSpeedll.setVisibility(GONE);
             }
-        try {
             int playerType = mPlayerConfig.getInt("pl");
             mPlayerBtn.setText(PlayerHelper.getPlayerName(playerType));
             mPlayerScaleBtn.setText(PlayerHelper.getScaleName(mPlayerConfig.getInt("sc")));
