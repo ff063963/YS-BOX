@@ -213,7 +213,16 @@ public class VodController extends BaseController {
 
     int videoPlayState = 0;
 
-    
+      // takagen99 : To get system time
+    private final Runnable mTimeRunnable = new Runnable() {
+        @Override
+        public void run() {
+            Date date = new Date();
+            SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+            mTime.setText(timeFormat.format(date));
+            mHandler.postDelayed(this, 1000);
+        }
+    };
      
 
    protected void setProgress(int duration, int position) {
