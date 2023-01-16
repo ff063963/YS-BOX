@@ -185,7 +185,10 @@ public class VodController extends BaseController {
     ImageView tvBack;
     LinearLayout mTopRoot;
     TextView m3rdPlayerBtn;
-          
+      
+     FrameLayout mProgressTop;
+     
+     
     public TextView mPlayerTimeStartEndText;
     public TextView mPlayerTimeStartBtn;
     public TextView mPlayerTimeSkipBtn;
@@ -201,6 +204,7 @@ public class VodController extends BaseController {
     TextView mAudioTrackBtn;
     public TextView mLandscapePortraitBtn;
 
+     
     Handler myHandle;
     Runnable myRunnable;
     int myHandleSeconds = 10000;//闲置多少毫秒秒关闭底栏  默认6秒
@@ -908,9 +912,9 @@ public class VodController extends BaseController {
     private VodControlListener listener;
 
     private boolean skipEnd = true;
-
-    @Override
      /*
+    @Override
+
     protected void setProgress(int duration, int position) {
 
         if (mIsDragging) {
