@@ -206,7 +206,7 @@ public class VodController extends BaseController {
          @SuppressLint("SimpleDateFormat")
         long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
 
-            SimpleDateFormat timeFormat = new SimpleDateFormat(" hh:mm aa ");
+            SimpleDateFormat timeFormat = new SimpleDateFormat("aa hh:mm");
             SimpleDateFormat onlyTimeFormat = new SimpleDateFormat(" hh:mm aa ");
                 long remainTime = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
                 Date endTime = new Date(date.getTime() + remainTime);
