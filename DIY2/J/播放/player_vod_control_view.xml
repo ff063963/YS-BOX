@@ -46,7 +46,7 @@
         android:visibility="gone"  
         tools:visibility="visible"
         android:orientation="vertical">
-   </LinearLayout>
+
  <!--名称 分辨率   -->
 <LinearLayout
             android:id="@+id/tv_top_l_container"
@@ -164,7 +164,7 @@
                     android:textStyle="bold" />
        
     </LinearLayout>
-
+   </LinearLayout>
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
         android:layout_width="match_parent"
