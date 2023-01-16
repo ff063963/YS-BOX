@@ -78,6 +78,10 @@ public class VodController extends BaseController {
     private boolean reexPlayerExist = false;
     private boolean KodiExist = false;
 
+        // takagen99 : Check Pause
+    private boolean isPaused = false;
+    private boolean isKeyUp = false;
+     
     public void setPlayerConfig(JSONObject playerCfg) {
         this.mPlayerConfig = playerCfg;
         updatePlayerCfgView();
@@ -97,17 +101,16 @@ public class VodController extends BaseController {
             public void callback(Message msg) {
                 switch (msg.what) {
                     case 1000: { // seek 刷新
-                         
                         mProgressRoot.setVisibility(VISIBLE);
-                            if (isPaused) {
-                            mProgressTop.setVisibility(VISIBLE);
+                        if (isPaused) {
+                            mProgressTop.setVisibility(GONE);
                         }
                         break;
                     }
                     case 1001: { // seek 关闭
                         mProgressRoot.setVisibility(GONE);
-                            if (isPaused) {
-                            mProgressTop.setVisibility(GONE);
+                        if (isPaused) {
+                            mProgressTop.setVisibility(VISIBLE);
                         }
                         break;
                     }
