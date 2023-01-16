@@ -47,7 +47,7 @@
         tools:visibility="visible"
         android:orientation="vertical">
    </LinearLayout>
-     
+ <!--名称 分辨率   -->
 <LinearLayout
             android:id="@+id/tv_top_l_container"
             android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
     </LinearLayout>
 
   
-    
+<!--开始 结束  速度-->
    <LinearLayout
         android:id="@+id/tv_top_r_container"
         android:layout_width="wrap_content"
@@ -106,43 +106,62 @@
 
         <TextView
             android:id="@+id/tv_sys_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:layout_marginRight="@dimen/vs_35"
-            android:tag="vod_control_pause_time"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/ts_34" />
+                android:layout_width="@dimen/vs_480"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/advent_pro_extralight"
+                android:gravity="right"
+                android:maxLines="1"
+                android:paddingRight="@dimen/vs_50"
+                android:shadowColor="@color/color_FF000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="3"
+                android:text="09:30 PM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ts_40"
+                android:textStyle="normal"
+                android:visibility="visible" />
         
            <TextView
               android:id="@+id/tv_finish_at"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_gravity="right"       
-              android:ellipsize="end"
-              android:focusable="false"
-              android:focusableInTouchMode="false"
-              android:maxLines="1"
-              android:layout_marginRight="@dimen/vs_24"
-              android:textColor="@android:color/white"
-              android:textSize="@dimen/ts_16" />
+                android:layout_width="@dimen/vs_480"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/advent_pro_extralight"
+                android:gravity="right"
+                android:maxLines="1"
+                android:paddingRight="@dimen/vs_50"
+                android:shadowColor="@color/color_FF000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="3"
+                android:text="Ends at 00:00 AM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ts_20"
+                android:textStyle="normal"
+                android:visibility="visible" />
         
         
         <TextView
-            android:id="@+id/tv_play_load_net_speed_right_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:layout_marginRight="@dimen/vs_24"
-            android:paddingTop="@dimen/vs_10"      
-            android:tag="vod_control_pause_time"
-            android:text="0Kb/s"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/ts_20" />
+                    android:id="@+id/tv_play_load_net_speed_right_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/vs_5"
+                    android:layout_marginLeft="@dimen/vs_5"
+                    android:fontFamily="@font/advent_pro_extralight"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:shadowColor="@color/color_FF000000"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="3"
+                    android:text="0Kb/s"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="@dimen/ts_20"
+                    android:textStyle="bold" />
+       
     </LinearLayout>
      
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
