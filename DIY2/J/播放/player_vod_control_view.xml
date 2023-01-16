@@ -48,10 +48,14 @@
     
 <LinearLayout
             android:id="@+id/tv_top_l_container"           
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/vs_20"
-            android:visibility="gone"  
+            android:layout_gravity="left"
+            android:layout_marginStart="@dimen/vs_20"
+            android:layout_marginLeft="@dimen/vs_20"
+            android:layout_marginTop="@dimen/vs_10" 
+            android:visibility="gone" 
+            tools:visibility="visible"
             android:orientation="vertical">
 
                                                                                                             
@@ -89,8 +93,10 @@
                     android:id="@+id/tv_videosize"   
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_gravity="center|left"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"                 
                     android:layout_weight="1"
                     android:gravity="center|left"
                     android:paddingLeft="@dimen/vs_20"
@@ -103,7 +109,6 @@
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
                     android:textStyle="bold" 
-                    android:visibility="gone"
                     tools:visibility="visible" />
 
     </LinearLayout>
