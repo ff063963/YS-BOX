@@ -228,7 +228,7 @@ public class VodController extends BaseController {
             mPlayLoadNetSpeed.setText(speed);
             String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
-    
+          mVideoSize.setText( "" + width + " X " + height +"" );
     if (isPaused) {
             finishAt.setText("剩余时间:" + PlayerUtils.stringForTime((int) TimeRemaining) +"  结束时间:" + onlyTimeFormat.format(endTime));
         } else {
