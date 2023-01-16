@@ -128,6 +128,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/vs_20"
+            android:layout_marginLeft="@dimen/vs_20"
+            android:layout_marginTop="@dimen/vs_10"
+            android:layout_marginRight="@dimen/vs_20"          
             android:orientation="horizontal">
            <TextView
                 android:id="@+id/tv_finish_at"
