@@ -227,7 +227,7 @@
                 android:tag="tv_speed_top">
 
                 <TextView
-                    android:id="@+id/tv_play_speed_top"
+                    android:id="@+id/tv_play_load_net_speed_right_top"
                     android:layout_width="@dimen/vs_70"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center"
@@ -256,7 +256,7 @@
                     android:shadowDx="0"
                     android:shadowDy="0"
                     android:shadowRadius="3"
-                    android:text="Mbps"
+                    android:text=""
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_16"
                     android:textStyle="bold" />
