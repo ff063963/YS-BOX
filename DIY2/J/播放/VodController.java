@@ -196,7 +196,37 @@ public class VodController extends BaseController {
     int videoPlayState = 0;
 
     
-    
+     
+
+ // takagen99 : Calculate finish time
+        long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
+        Calendar date = Calendar.getInstance();
+        long t = date.getTimeInMillis();
+        Date afterAdd = new Date(t + TimeRemaining);
+        SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+        if (isPaused) {
+            mTimeEnd.setText("Remaining Time " + PlayerUtils.stringForTime((int) TimeRemaining) + " | Ends at " + timeEnd.format(afterAdd));
+        } else {
+            mTimeEnd.setText("Ends at " + timeEnd.format(afterAdd));
+        }
+        mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
+        mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
+        if (duration > 0) {
+            mSeekBar.setEnabled(true);
+            int pos = (int) (position * 1.0 / duration * mSeekBar.getMax());
+            mSeekBar.setProgress(pos);
+        } else {
+            mSeekBar.setEnabled(false);
+        }
+        int percent = mControlWrapper.getBufferedPercentage();
+        if (percent >= 95) {
+            mSeekBar.setSecondaryProgress(mSeekBar.getMax());
+        } else {
+            mSeekBar.setSecondaryProgress(percent * 10);
+        }
+    }
+     
+    /*
     
     //增加完结时间
     private Runnable myRunnable2 = new Runnable() {
@@ -223,20 +253,7 @@ public class VodController extends BaseController {
             mHandler.postDelayed(this, 1000);
         }
     };
-
- /* 
-  //增加背景
-     void showBtnHint(View focusedView) {
-        long postDelay = 300;
-        if(btnHint.getVisibility() == VISIBLE) {
-            btnHint.clearAnimation();
-            btnHint.animate().alpha(0).setDuration(300).start();
-        } else {
-        
-        }
-    };
-
-   */ 
+*/
     @Override
     protected void initView() {
         super.initView();
