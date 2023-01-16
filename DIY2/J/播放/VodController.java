@@ -246,7 +246,7 @@ public class VodController extends BaseController {
             }
         }
        
-    
+    /*
         // takagen99 : Calculate finish time
         long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
         Calendar date = Calendar.getInstance();
@@ -284,7 +284,7 @@ public class VodController extends BaseController {
             mSeekBar.setSecondaryProgress(percent * 10);
         }
     }
-       /*   
+       */   
 
     //增加完结时间
     private Runnable myRunnable2 = new Runnable() {
@@ -315,7 +315,7 @@ public class VodController extends BaseController {
             mHandler.postDelayed(this, 1000);
         }
     };
-*/
+
     @Override
     protected void initView() {
         super.initView();
@@ -358,9 +358,7 @@ public class VodController extends BaseController {
     finishAt = findViewById(R.id.tv_finish_at);
     mPlayerFFwd = findViewById(R.id.play_ff);
     mTopRoot = findViewById(R.id.top_container);
-     //btnHint = findViewById(R.id.play_btn_hint);   
-        
- //tvBack = findViewById(R.id.tv_back);
+
         
         initSubtitleInfo();
 
@@ -371,14 +369,14 @@ public class VodController extends BaseController {
                 hideBottom();
             }
         };
-/*
+
         mPlayPauseTime.post(new Runnable() {
             @Override
             public void run() {
                 mHandler.post(myRunnable2);
             }
         });
-*/
+
         mGridView.setLayoutManager(new V7LinearLayoutManager(getContext(), 0, false));
         ParseAdapter parseAdapter = new ParseAdapter();
         parseAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
