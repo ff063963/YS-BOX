@@ -233,7 +233,7 @@ public class VodController extends BaseController {
                 listener.playNext(true);
             }
         }
-            /*
+       
     
         // takagen99 : Calculate finish time
         long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
@@ -241,6 +241,11 @@ public class VodController extends BaseController {
         long t = date.getTimeInMillis();
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+         mPlayLoadNetSpeedRightTop.setText(speed);
+         mPlayLoadNetSpeed.setText(speed);
+         String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
+         String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
+         mVideoSize.setText( "" + width + " X " + height +"" );
         if (isPaused) {
             finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + timeEnd.format(afterAdd));
         } else {
@@ -262,8 +267,8 @@ public class VodController extends BaseController {
             mSeekBar.setSecondaryProgress(percent * 10);
         }
     }
-     
-*/
+       /*   
+
     //增加完结时间
     private Runnable myRunnable2 = new Runnable() {
             long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
@@ -293,7 +298,7 @@ public class VodController extends BaseController {
             mHandler.postDelayed(this, 1000);
         }
     };
-
+*/
     @Override
     protected void initView() {
         super.initView();
