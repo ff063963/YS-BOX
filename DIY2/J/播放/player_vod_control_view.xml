@@ -103,7 +103,7 @@
 
      <TextView
             android:id="@+id/tv_sys_time"
-                android:layout_width="@dimen/vs_480"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:fontFamily="@font/advent_pro_extralight"
@@ -159,7 +159,7 @@
                     android:textSize="@dimen/ts_20"
                     android:textStyle="bold" />
        </LinearLayout>
-    </LinearLayout>
+
    </LinearLayout>
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
