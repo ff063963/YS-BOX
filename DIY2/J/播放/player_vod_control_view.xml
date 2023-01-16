@@ -103,7 +103,6 @@
                     android:textSize="@dimen/ts_22"
                     android:textStyle="bold" 
                     android:orientation="horizontal"   
-                    android:visibility="gone"
                     tools:visibility="visible" />
 
     </LinearLayout>
