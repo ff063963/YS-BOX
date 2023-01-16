@@ -27,6 +27,7 @@ cp $CURRENT_DIR/DIY2/J/播放/play_mobile_center_shape.xml   $CURRENT_DIR/$DIR/a
 #cp $CURRENT_DIR/DIY2/J/播放/shape_dialog_top_bg.xml        $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_top_bg.xml
 cp $CURRENT_DIR/DIY2/J/播放/box_controller_bottom_bg.xml       $CURRENT_DIR/$DIR/app/src/main/res/drawable/box_controller_bottom_bg.xml
 cp $CURRENT_DIR/DIY2/J/播放/box_controller_top_bg.xml       $CURRENT_DIR/$DIR/app/src/main/res/drawable/box_controller_top_bg.xml
+cp $CURRENT_DIR/DIY2/J/播放/button_detail_collect.xml       $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_detail_collect.xml
 //设置界面
 cp $CURRENT_DIR/DIY2/J/设置/ModelSettingFragment.java    $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/ModelSettingFragment.java
 cp $CURRENT_DIR/DIY2/J/设置/fragment_model.xml           $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
