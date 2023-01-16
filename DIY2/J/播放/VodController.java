@@ -204,7 +204,7 @@ public class VodController extends BaseController {
         public void run() {
         Date date = new Date();
          @SuppressLint("SimpleDateFormat")
-  
+        long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
 
             SimpleDateFormat timeFormat = new SimpleDateFormat(" aa hh:mm ");
               SimpleDateFormat onlyTimeFormat = new SimpleDateFormat("aa hh:mm");
@@ -218,7 +218,7 @@ public class VodController extends BaseController {
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
             
             mVideoSize.setText( "" + width + " X " + height +"" );
-            finishAt.setText("结束于：" + onlyTimeFormat.format(endTime));
+            finishAt.setText("剩余时间：" + PlayerUtils.stringForTime((int) TimeRemaining) +"结束时间：" + onlyTimeFormat.format(endTime));
 
             mHandler.postDelayed(this, 1000);
         }
