@@ -180,6 +180,9 @@ public class VodController extends BaseController {
     TextView mPlayerRetry;
     TextView mPlayrefresh;
     
+    TextView mTime;
+    TextView mTimeEnd;
+     
     TextView finishAt;
     TextView btnHint;
     TextView mPlayerFFwd;
