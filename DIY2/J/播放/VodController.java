@@ -253,7 +253,8 @@ public class VodController extends BaseController {
         long t = date.getTimeInMillis();
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
-          String speed = PlayerHelper.getDisplaySpeed(mControlWrapper.getTcpSpeed());
+         mPlayPauseTime.setText(timeFormat.format(date));
+         String speed = PlayerHelper.getDisplaySpeed(mControlWrapper.getTcpSpeed());
          mSpeedll.setText(speed);
          mPlayLoadNetSpeed.setText(speed);
          String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
@@ -913,6 +914,8 @@ public class VodController extends BaseController {
           //      mPlayTitle1.setText(playTitleInfo);
     }
 
+
+     
     public void resetSpeed() {
         skipEnd = true;
         mHandler.removeMessages(1004);
