@@ -190,8 +190,8 @@
                     android:shadowRadius="3"
                     android:text="0Kb/s"
                     android:textColor="@color/color_FFFFFF"
-                    android:textSize="@dimen/ts_20"
-                    android:textStyle="normal" />
+                    android:textSize="@dimen/ts_24"
+                    android:textStyle="bold" />
 
        </LinearLayout>
 
