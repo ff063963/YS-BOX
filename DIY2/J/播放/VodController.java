@@ -233,12 +233,14 @@ public class VodController extends BaseController {
                 listener.playNext(true);
             }
         }
+            /*
+    
         // takagen99 : Calculate finish time
         long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
         Calendar date = Calendar.getInstance();
         long t = date.getTimeInMillis();
         Date afterAdd = new Date(t + TimeRemaining);
-        SimpleDateFormat timeEnd = new SimpleDateFormat("HH:mm aa", Locale.ENGLISH);
+        SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
         if (isPaused) {
             finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + timeEnd.format(afterAdd));
         } else {
@@ -261,10 +263,13 @@ public class VodController extends BaseController {
         }
     }
      
-    /*
-    
+*/
     //增加完结时间
     private Runnable myRunnable2 = new Runnable() {
+            long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
+        Calendar date = Calendar.getInstance();
+        long t = date.getTimeInMillis();
+        Date afterAdd = new Date(t + TimeRemaining);
         @Override
         public void run() {
         Date date = new Date();
@@ -281,14 +286,14 @@ public class VodController extends BaseController {
             mPlayLoadNetSpeed.setText(speed);
             String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
-            
+           
             mVideoSize.setText( "" + width + " X " + height +"" );
             finishAt.setText("结束于：" + onlyTimeFormat.format(endTime));
-
+            finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + onlyTimeFormat.format(endTime));
             mHandler.postDelayed(this, 1000);
         }
     };
-*/
+
     @Override
     protected void initView() {
         super.initView();
