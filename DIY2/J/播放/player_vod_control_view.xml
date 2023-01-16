@@ -69,27 +69,18 @@
                 android:background="@drawable/button_detail_collect" />                                                                                                              
             <TextView
                 android:id="@+id/tv_info_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:gravity="center|left"
-                android:maxLines="1"
+                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/vs_20"
+                        android:maxWidth="@dimen/vs_960"
                             android:singleLine="true"
                             android:ellipsize="marquee"
                             android:focusable="true"
-                            android:focusableInTouchMode="true"        
-                android:shadowColor="@color/color_FF000000"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="3"
-                android:tag="tv_title_top"
-                android:text="TvTitle"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_26"
-                android:textStyle="bold"
-                android:visibility="visible" />
+                            android:focusableInTouchMode="true"
+                        android:maxLines="1"                  
+                        android:text="http://"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/ts_24" />
 
             <TextView
                         android:id="@+id/tv_videosize"
