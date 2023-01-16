@@ -253,6 +253,9 @@ public class VodController extends BaseController {
         long t = date.getTimeInMillis();
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+        SimpleDateFormat timeFormat = new SimpleDateFormat(" aa hh:mm ");
+        SimpleDateFormat onlyTimeFormat = new SimpleDateFormat("aa hh:mm");
+        
          mPlayPauseTime.setText(timeFormat.format(date));
          String speed = PlayerHelper.getDisplaySpeed(mControlWrapper.getTcpSpeed());
          mSpeedll.setText(speed);
