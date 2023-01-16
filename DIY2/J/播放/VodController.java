@@ -97,11 +97,18 @@ public class VodController extends BaseController {
             public void callback(Message msg) {
                 switch (msg.what) {
                     case 1000: { // seek 刷新
+                         
                         mProgressRoot.setVisibility(VISIBLE);
+                            if (isPaused) {
+                            mProgressTop.setVisibility(VISIBLE);
+                        }
                         break;
                     }
                     case 1001: { // seek 关闭
                         mProgressRoot.setVisibility(GONE);
+                            if (isPaused) {
+                            mProgressTop.setVisibility(GONE);
+                        }
                         break;
                     }
                     case 1002: { // 显示底部菜单
@@ -216,10 +223,14 @@ public class VodController extends BaseController {
             mPlayLoadNetSpeed.setText(speed);
             String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
-            
-            mVideoSize.setText( "" + width + " X " + height +"" );
-            finishAt.setText("剩余时间:" + PlayerUtils.stringForTime((int) TimeRemaining) +"  结束时间:" + onlyTimeFormat.format(endTime));
-
+    
+    if (isPaused) {
+            mTimeEnd.setText("剩余时间:" + PlayerUtils.stringForTime((int) TimeRemaining) +"  结束时间:" + onlyTimeFormat.format(endTime));
+        } else {
+            mTimeEnd.setText("  结束时间:" + onlyTimeFormat.format(endTime));
+        }
+             
+          
             mHandler.postDelayed(this, 1000);
         }
     };
@@ -953,10 +964,12 @@ public class VodController extends BaseController {
             case VideoView.STATE_IDLE:
                 break;
             case VideoView.STATE_PLAYING:
+                isPaused = false; 
                 initLandscapePortraitBtnInfo();
                 startProgress();
                 break;
             case VideoView.STATE_PAUSED:
+                isPaused = true;    
                 mTopRoot1.setVisibility(GONE);
                 mTopRoot2.setVisibility(GONE);
                 mPlayTitle.setVisibility(VISIBLE);
