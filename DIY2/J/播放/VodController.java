@@ -222,7 +222,7 @@ public class VodController extends BaseController {
         public void run() {
             Date date = new Date();
             SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
-            mTime.setText(timeFormat.format(date));
+            mPlayPauseTime.setText(timeFormat.format(date));
             mHandler.postDelayed(this, 1000);
         }
     };
@@ -368,14 +368,14 @@ public class VodController extends BaseController {
                 hideBottom();
             }
         };
-
+/*
         mPlayPauseTime.post(new Runnable() {
             @Override
             public void run() {
                 mHandler.post(myRunnable2);
             }
         });
-
+*/
         mGridView.setLayoutManager(new V7LinearLayoutManager(getContext(), 0, false));
         ParseAdapter parseAdapter = new ParseAdapter();
         parseAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
