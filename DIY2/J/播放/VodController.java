@@ -40,14 +40,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-
-import android.widget.FrameLayout;
-//时间 日期
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+
+import java.util.Date;
 
 import xyz.doikki.videoplayer.player.VideoView;
 import xyz.doikki.videoplayer.util.PlayerUtils;
@@ -77,15 +73,11 @@ public class VodController extends BaseController {
      
      //播放器一键切换
     private JSONObject mPlayerConfig = null;
+
     private boolean mxPlayerExist = false;
     private boolean reexPlayerExist = false;
     private boolean KodiExist = false;
 
-     // takagen99 : Check Pause
-    private boolean isPaused = false;
-    private boolean isKeyUp = false;
-
-     
     public void setPlayerConfig(JSONObject playerCfg) {
         this.mPlayerConfig = playerCfg;
         updatePlayerCfgView();
@@ -106,16 +98,10 @@ public class VodController extends BaseController {
                 switch (msg.what) {
                     case 1000: { // seek 刷新
                         mProgressRoot.setVisibility(VISIBLE);
-                            if (isPaused) {
-                            mProgressTop.setVisibility(VISIBLE);
-                        }
                         break;
                     }
                     case 1001: { // seek 关闭
                         mProgressRoot.setVisibility(GONE);
-                          if (isPaused) {
-                            mProgressTop.setVisibility(GONE);
-                        }
                         break;
                     }
                     case 1002: { // 显示底部菜单
@@ -170,7 +156,7 @@ public class VodController extends BaseController {
     TvRecyclerView mGridView;
     TextView mPlayTitle;
    // TextView mPlayTitle1;
-    TextView mSpeedll;
+    TextView mPlayLoadNetSpeedRightTop;
     TextView mNextBtn;
     TextView mPreBtn;
     TextView mPlayerScaleBtn;
@@ -180,9 +166,6 @@ public class VodController extends BaseController {
     TextView mPlayerRetry;
     TextView mPlayrefresh;
     
-    TextView mTime;
-    TextView mTimeEnd;
-     
     TextView finishAt;
     TextView btnHint;
     TextView mPlayerFFwd;
@@ -190,10 +173,7 @@ public class VodController extends BaseController {
     ImageView tvBack;
     LinearLayout mTopRoot;
     TextView m3rdPlayerBtn;
-      
-     FrameLayout mProgressTop;
-     
-     
+          
     public TextView mPlayerTimeStartEndText;
     public TextView mPlayerTimeStartBtn;
     public TextView mPlayerTimeSkipBtn;
@@ -209,89 +189,17 @@ public class VodController extends BaseController {
     TextView mAudioTrackBtn;
     public TextView mLandscapePortraitBtn;
 
-     
     Handler myHandle;
     Runnable myRunnable;
     int myHandleSeconds = 10000;//闲置多少毫秒秒关闭底栏  默认6秒
 
     int videoPlayState = 0;
 
-      // takagen99 : To get system time
-    private final Runnable mTimeRunnable = new Runnable() {
-        @Override
-        public void run() {
-            Date date = new Date();
-            SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
-            mPlayPauseTime.setText(timeFormat.format(date));
-            mHandler.postDelayed(this, 1000);
-        }
-    };
-     
-
-   protected void setProgress(int duration, int position) {
-        if (mIsDragging) {
-            return;
-        }
-        super.setProgress(duration, position);
-        if (skipEnd && position != 0 && duration != 0) {
-            int et = 0;
-            try {
-                et = mPlayerConfig.getInt("et");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (et > 0 && position + (et * 1000) >= duration) {
-                skipEnd = false;
-                listener.playNext(true);
-            }
-        }
-       
-    /*
-        // takagen99 : Calculate finish time
-        long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
-        Calendar date = Calendar.getInstance();
-        long t = date.getTimeInMillis();
-        Date afterAdd = new Date(t + TimeRemaining);
-        SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
-        SimpleDateFormat timeFormat = new SimpleDateFormat(" aa hh:mm ");
-        SimpleDateFormat onlyTimeFormat = new SimpleDateFormat("aa hh:mm");
-        
-         mPlayPauseTime.setText(timeFormat.format(date));
-         String speed = PlayerHelper.getDisplaySpeed(mControlWrapper.getTcpSpeed());
-         mSpeedll.setText(speed);
-         mPlayLoadNetSpeed.setText(speed);
-         String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
-         String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
-         mVideoSize.setText( "" + width + " X " + height +"" );
-        if (isPaused) {
-            finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + timeEnd.format(afterAdd));
-        } else {
-            finishAt.setText("结束时间 " + timeEnd.format(afterAdd));
-        }
-        mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
-        mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
-        if (duration > 0) {
-            mSeekBar.setEnabled(true);
-            int pos = (int) (position * 1.0 / duration * mSeekBar.getMax());
-            mSeekBar.setProgress(pos);
-        } else {
-            mSeekBar.setEnabled(false);
-        }
-        int percent = mControlWrapper.getBufferedPercentage();
-        if (percent >= 95) {
-            mSeekBar.setSecondaryProgress(mSeekBar.getMax());
-        } else {
-            mSeekBar.setSecondaryProgress(percent * 10);
-        }
-    }
-       */   
-
+    
+    
+    
     //增加完结时间
     private Runnable myRunnable2 = new Runnable() {
-            long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
-        Calendar date = Calendar.getInstance();
-        long t = date.getTimeInMillis();
-        Date afterAdd = new Date(t + TimeRemaining);
         @Override
         public void run() {
         Date date = new Date();
@@ -308,14 +216,27 @@ public class VodController extends BaseController {
             mPlayLoadNetSpeed.setText(speed);
             String width = Integer.toString(mControlWrapper.getVideoSize()[0]);
             String height = Integer.toString(mControlWrapper.getVideoSize()[1]);
-           
+            
             mVideoSize.setText( "" + width + " X " + height +"" );
             finishAt.setText("结束于：" + onlyTimeFormat.format(endTime));
-            finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + onlyTimeFormat.format(endTime));
+
             mHandler.postDelayed(this, 1000);
         }
     };
 
+ /* 
+  //增加背景
+     void showBtnHint(View focusedView) {
+        long postDelay = 300;
+        if(btnHint.getVisibility() == VISIBLE) {
+            btnHint.clearAnimation();
+            btnHint.animate().alpha(0).setDuration(300).start();
+        } else {
+        
+        }
+    };
+
+   */ 
     @Override
     protected void initView() {
         super.initView();
@@ -323,7 +244,7 @@ public class VodController extends BaseController {
         mTotalTime = findViewById(R.id.total_time);
         mPlayTitle = findViewById(R.id.tv_info_name);
        // mPlayTitle1 = findViewById(R.id.tv_info_name1);
-        mSpeedll = findViewById(R.id.tv_speed_top);
+        mPlayLoadNetSpeedRightTop = findViewById(R.id.tv_play_load_net_speed_right_top);
         mSeekBar = findViewById(R.id.seekBar);
         mProgressRoot = findViewById(R.id.tv_progress_container);
         mProgressIcon = findViewById(R.id.tv_progress_icon);
@@ -358,7 +279,9 @@ public class VodController extends BaseController {
     finishAt = findViewById(R.id.tv_finish_at);
     mPlayerFFwd = findViewById(R.id.play_ff);
     mTopRoot = findViewById(R.id.top_container);
-
+     //btnHint = findViewById(R.id.play_btn_hint);   
+        
+ //tvBack = findViewById(R.id.tv_back);
         
         initSubtitleInfo();
 
@@ -882,15 +805,6 @@ public class VodController extends BaseController {
     void updatePlayerCfgView() {
         try {
             int playerType = mPlayerConfig.getInt("pl");
-            // takagen99: Only display loading speed when IJK
-            if (playerType == 1) {
-             //   mSpeedHidell.setVisibility(VISIBLE);
-                mSpeedll.setVisibility(VISIBLE);
-            } else {
-              //  mSpeedHidell.setVisibility(GONE);
-                mSpeedll.setVisibility(GONE);
-            }
-
             mPlayerBtn.setText(PlayerHelper.getPlayerName(playerType));
             mPlayerScaleBtn.setText(PlayerHelper.getScaleName(mPlayerConfig.getInt("sc")));
             mPlayerIJKBtn.setText(mPlayerConfig.getString("ijk"));
@@ -915,8 +829,6 @@ public class VodController extends BaseController {
           //      mPlayTitle1.setText(playTitleInfo);
     }
 
-
-     
     public void resetSpeed() {
         skipEnd = true;
         mHandler.removeMessages(1004);
@@ -950,9 +862,8 @@ public class VodController extends BaseController {
     private VodControlListener listener;
 
     private boolean skipEnd = true;
-     /*
-    @Override
 
+    @Override
     protected void setProgress(int duration, int position) {
 
         if (mIsDragging) {
@@ -971,7 +882,6 @@ public class VodController extends BaseController {
                 listener.playNext(true);
             }
         }
-        
         mCurrentTime.setText(PlayerUtils.stringForTime(position));
         mTotalTime.setText(PlayerUtils.stringForTime(duration));
         if (duration > 0) {
@@ -988,7 +898,7 @@ public class VodController extends BaseController {
             mSeekBar.setSecondaryProgress(percent * 10);
         }
     }
-*/
+
     private boolean simSlideStart = false;
     private int simSeekPosition = 0;
     private long simSlideOffset = 0;
@@ -1043,12 +953,10 @@ public class VodController extends BaseController {
             case VideoView.STATE_IDLE:
                 break;
             case VideoView.STATE_PLAYING:
-                 isPaused = false;  
                 initLandscapePortraitBtnInfo();
                 startProgress();
                 break;
             case VideoView.STATE_PAUSED:
-                isPaused = true;
                 mTopRoot1.setVisibility(GONE);
                 mTopRoot2.setVisibility(GONE);
                 mPlayTitle.setVisibility(VISIBLE);
