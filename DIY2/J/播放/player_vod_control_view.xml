@@ -79,7 +79,7 @@
                 android:textStyle="bold"
                 android:orientation="horizontal"   
                 android:visibility="gone"
-                tools:visibility="visible"> />
+                tools:visibility="visible" />
 
     
 
@@ -104,7 +104,7 @@
                     android:textStyle="bold" 
                     android:orientation="horizontal"   
                     android:visibility="gone"
-                    tools:visibility="visible"> />
+                    tools:visibility="visible" />
 
     </LinearLayout>
 
