@@ -40,10 +40,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+//时间 日期
 import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 import xyz.doikki.videoplayer.player.VideoView;
 import xyz.doikki.videoplayer.util.PlayerUtils;
@@ -222,9 +224,9 @@ public class VodController extends BaseController {
         Date afterAdd = new Date(t + TimeRemaining);
         SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
         if (isPaused) {
-            mTimeEnd.setText("Remaining Time " + PlayerUtils.stringForTime((int) TimeRemaining) + " | Ends at " + timeEnd.format(afterAdd));
+            finishAt.setText("Remaining Time " + PlayerUtils.stringForTime((int) TimeRemaining) + " | Ends at " + timeEnd.format(afterAdd));
         } else {
-            mTimeEnd.setText("Ends at " + timeEnd.format(afterAdd));
+            finishAt.setText("Ends at " + timeEnd.format(afterAdd));
         }
         mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
         mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
@@ -326,14 +328,14 @@ public class VodController extends BaseController {
                 hideBottom();
             }
         };
-
+/*
         mPlayPauseTime.post(new Runnable() {
             @Override
             public void run() {
                 mHandler.post(myRunnable2);
             }
         });
-
+*/
         mGridView.setLayoutManager(new V7LinearLayoutManager(getContext(), 0, false));
         ParseAdapter parseAdapter = new ParseAdapter();
         parseAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
@@ -898,6 +900,7 @@ public class VodController extends BaseController {
     private boolean skipEnd = true;
 
     @Override
+     /*
     protected void setProgress(int duration, int position) {
 
         if (mIsDragging) {
@@ -916,6 +919,7 @@ public class VodController extends BaseController {
                 listener.playNext(true);
             }
         }
+        
         mCurrentTime.setText(PlayerUtils.stringForTime(position));
         mTotalTime.setText(PlayerUtils.stringForTime(duration));
         if (duration > 0) {
@@ -932,7 +936,7 @@ public class VodController extends BaseController {
             mSeekBar.setSecondaryProgress(percent * 10);
         }
     }
-
+*/
     private boolean simSlideStart = false;
     private int simSeekPosition = 0;
     private long simSlideOffset = 0;
