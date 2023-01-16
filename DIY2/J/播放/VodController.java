@@ -53,6 +53,7 @@ import static xyz.doikki.videoplayer.util.PlayerUtils.stringForTime;
 import java.util.Arrays;
 import com.github.tvbox.osc.ui.fragment.PlayFragment;
 
+import android.widget.FrameLayout;
 //播放器
 import com.github.tvbox.osc.player.thirdparty.Kodi;
 import com.github.tvbox.osc.player.thirdparty.MXPlayer;
