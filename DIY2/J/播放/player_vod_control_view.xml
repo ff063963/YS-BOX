@@ -164,7 +164,7 @@
                     android:textStyle="bold" />
        
     </LinearLayout>
- </LinearLayout>    
+
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
         android:layout_width="match_parent"
