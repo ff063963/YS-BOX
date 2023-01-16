@@ -148,7 +148,7 @@
                 android:textSize="@dimen/ts_20"
                 android:textStyle="normal"
                 android:visibility="visible"
-                android:orientation="horizontal">
+                android:orientation="horizontal"/>
         
         
         <TextView
