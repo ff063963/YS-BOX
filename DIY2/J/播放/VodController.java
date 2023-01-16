@@ -198,7 +198,24 @@ public class VodController extends BaseController {
     
      
 
- // takagen99 : Calculate finish time
+   protected void setProgress(int duration, int position) {
+        if (mIsDragging) {
+            return;
+        }
+        super.setProgress(duration, position);
+        if (skipEnd && position != 0 && duration != 0) {
+            int et = 0;
+            try {
+                et = mPlayerConfig.getInt("et");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if (et > 0 && position + (et * 1000) >= duration) {
+                skipEnd = false;
+                listener.playNext(true);
+            }
+        }
+        // takagen99 : Calculate finish time
         long TimeRemaining = mControlWrapper.getDuration() - mControlWrapper.getCurrentPosition();
         Calendar date = Calendar.getInstance();
         long t = date.getTimeInMillis();
