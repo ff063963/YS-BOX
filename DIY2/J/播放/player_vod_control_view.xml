@@ -185,6 +185,16 @@
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_20"
                     android:textStyle="bold" />
+       <ProgressBar
+        android:layout_width="@dimen/vs_50"
+        android:layout_height="@dimen/vs_50"
+        android:layout_gravity="center"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/anim_loading"
+        android:indeterminateOnly="true"
+        android:tag="vod_control_loading"
+        android:visibility="gone" />
+
        </LinearLayout>
 
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
@@ -713,15 +723,6 @@
 
     </LinearLayout>
 
-    <ProgressBar
-        android:layout_width="@dimen/vs_50"
-        android:layout_height="@dimen/vs_50"
-        android:layout_gravity="center"
-        android:indeterminateBehavior="repeat"
-        android:indeterminateDrawable="@drawable/anim_loading"
-        android:indeterminateOnly="true"
-        android:tag="vod_control_loading"
-        android:visibility="gone" />
 
    <TextView
         android:id="@+id/tv_play_load_net_speed"
