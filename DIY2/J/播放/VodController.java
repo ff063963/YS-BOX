@@ -246,7 +246,6 @@ public class VodController extends BaseController {
         }
         mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
         mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
-        mSpeedll.setText(speed);
         if (duration > 0) {
             mSeekBar.setEnabled(true);
             int pos = (int) (position * 1.0 / duration * mSeekBar.getMax());
@@ -856,6 +855,16 @@ public class VodController extends BaseController {
     }
 */
     void updatePlayerCfgView() {
+                 try {
+            int playerType = mPlayerConfig.getInt("pl");
+            // takagen99: Only display loading speed when IJK
+            if (playerType == 1) {
+                mSpeedHidell.setVisibility(VISIBLE);
+                mSpeedll.setVisibility(VISIBLE);
+            } else {
+                mSpeedHidell.setVisibility(GONE);
+                mSpeedll.setVisibility(GONE);
+            }
         try {
             int playerType = mPlayerConfig.getInt("pl");
             mPlayerBtn.setText(PlayerHelper.getPlayerName(playerType));
