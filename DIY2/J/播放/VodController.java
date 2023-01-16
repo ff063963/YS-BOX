@@ -232,8 +232,6 @@ public class VodController extends BaseController {
         } else {
             finishAt.setText("  结束时间:" + onlyTimeFormat.format(endTime));
         }
-             
-          
             mHandler.postDelayed(this, 1000);
         }
     };
@@ -293,6 +291,8 @@ public class VodController extends BaseController {
     finishAt = findViewById(R.id.tv_finish_at);
     mPlayerFFwd = findViewById(R.id.play_ff);
     mTopRoot = findViewById(R.id.top_container);
+
+   mProgressTop = findViewById(R.id.tv_pause_container);      
      //btnHint = findViewById(R.id.play_btn_hint);   
         
  //tvBack = findViewById(R.id.tv_back);
@@ -463,11 +463,11 @@ public class VodController extends BaseController {
         mPlayerFFwd.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mSpeed == 1.5f) {
+                if (mSpeed == 1.25f) {
                     mSpeed = 1.0f;
 
                 } else {
-                    mSpeed = 1.5f;
+                    mSpeed = 1.25f;
 
                 }
                 setPlaySpeed(mSpeed);
