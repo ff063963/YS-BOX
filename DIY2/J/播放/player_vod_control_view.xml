@@ -57,9 +57,9 @@
             tools:visibility="visible"
             android:orientation="vertical">
                                                                                                             
-            <TextView
-                android:id="@+id/tv_info_name"
-                   android:layout_width="wrap_content"
+   <TextView
+                        android:id="@+id/tv_info_name"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="@dimen/vs_20"
                         android:maxWidth="@dimen/vs_960"
@@ -67,62 +67,25 @@
                             android:ellipsize="marquee"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
-                android:shadowColor="@color/color_FF000000"
-                android:shadowDx="0"
-                android:shadowDy="0"     
-                android:shadowRadius="3"
-                android:tag="tv_title_top"
-                android:text="TvTitle"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/ts_26"
-                android:textStyle="bold"
-                android:visibility="visible" />
+                        android:maxLines="1"                  
+                        android:text="http://"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/ts_24" />
 
             <TextView
-                android:id="@+id/tv_videosize"
-                android:layout_width="@dimen/vs_120"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:tag="tv_speed_top">
-
-                <TextView
-                    android:id="@+id/tv_play_speed_top"
-                    android:layout_width="@dimen/vs_70"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:gravity="right"
-                    android:shadowColor="@color/color_FF000000"
-                    android:shadowDx="0"
-                    android:shadowDy="0"
-                    android:shadowRadius="3"
-                    android:tag="play_speed_top"
-                    android:text="Speed"
-                    android:textColor="@color/color_FFFFFF"
-                    android:textSize="@dimen/ts_22"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_MPBS_top"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginStart="@dimen/vs_5"
-                    android:layout_marginLeft="@dimen/vs_5"
-                    android:gravity="right"
-                    android:shadowColor="@color/color_FF000000"
-                    android:shadowDx="0"
-                    android:shadowDy="0"
-                    android:shadowRadius="3"
-                    android:text="Mbps"
-                    android:textColor="@color/color_FFFFFF"
-                    android:textSize="@dimen/ts_16"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
+                        android:id="@+id/tv_videosize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/vs_20"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:maxLines="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/ts_20"
+                        tools:text="100" />
     </LinearLayout>
-
+  
   
 <!--开始 结束  速度 " -->
    <LinearLayout
