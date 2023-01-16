@@ -75,11 +75,15 @@ public class VodController extends BaseController {
      
      //播放器一键切换
     private JSONObject mPlayerConfig = null;
-
     private boolean mxPlayerExist = false;
     private boolean reexPlayerExist = false;
     private boolean KodiExist = false;
 
+     // takagen99 : Check Pause
+    private boolean isPaused = false;
+    private boolean isKeyUp = false;
+
+     
     public void setPlayerConfig(JSONObject playerCfg) {
         this.mPlayerConfig = playerCfg;
         updatePlayerCfgView();
@@ -997,10 +1001,12 @@ public class VodController extends BaseController {
             case VideoView.STATE_IDLE:
                 break;
             case VideoView.STATE_PLAYING:
+                 isPaused = false;  
                 initLandscapePortraitBtnInfo();
                 startProgress();
                 break;
             case VideoView.STATE_PAUSED:
+                isPaused = true;
                 mTopRoot1.setVisibility(GONE);
                 mTopRoot2.setVisibility(GONE);
                 mPlayTitle.setVisibility(VISIBLE);
