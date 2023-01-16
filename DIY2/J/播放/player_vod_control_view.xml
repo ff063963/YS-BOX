@@ -98,12 +98,11 @@
                     android:shadowDy="0"
                     android:shadowRadius="3"
                     android:tag="play_speed_top"
-                    android:text="Speed"
+                    android:text=""
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
                     android:textStyle="bold" 
-                    android:orientation="horizontal"   
-                    tools:visibility="visible" />
+                    android:orientation="horizontal"/>
 
     </LinearLayout>
 
