@@ -43,6 +43,7 @@
         tools:visibility="visible"
         android:orientation="horizontal">
 
+   </LinearLayout>
  <!--名称 分辨率   -->
 <LinearLayout
             android:id="@+id/tv_top_l_container"
@@ -87,7 +88,7 @@
     </LinearLayout>
 
   
-<!--开始 结束  速度 android:paddingRight="@dimen/vs_20"   android:layout_marginRight="@dimen/vs_10"> -->
+<!--开始 结束  速度 "> -->
    <LinearLayout
         android:id="@+id/tv_top_r_container"
         android:layout_width="wrap_content"
@@ -96,7 +97,6 @@
         android:visibility="gone"
         tools:visibility="visible"
         android:layout_gravity="right"
-     
         android:layout_marginEnd="@dimen/vs_5"               
         android:paddingTop="@dimen/vs_10"  
         android:orientation="vertical">
@@ -109,7 +109,6 @@
                 android:fontFamily="@font/advent_pro_extralight"
                 android:gravity="right"
                 android:maxLines="1"
-
                 android:shadowColor="@color/color_FF000000"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -160,7 +159,6 @@
                     android:textStyle="bold" />
        </LinearLayout>
 
-   </LinearLayout>
     <com.github.tvbox.osc.subtitle.widget.SimpleSubtitleView
         android:id="@+id/subtitle_view"
         android:layout_width="match_parent"
@@ -579,12 +577,13 @@
         android:visibility="gone"
         tools:visibility="visible">
 
+         <!--播放布局    -->  
        <LinearLayout
             android:id="@+id/ll_pause"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/vs_70"
             android:layout_gravity="end"
-            android:layout_marginTop="@dimen/vs_80"
+            android:layout_marginTop="@dimen/vs_90"
             android:layout_marginEnd="@dimen/vs_50"
             android:layout_marginRight="@dimen/vs_50"
 
