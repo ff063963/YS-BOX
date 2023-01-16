@@ -142,6 +142,7 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:maxLines="1"
+                android:layout_marginRight="@dimen/vs_10"          
                 android:paddingRight="@dimen/vs_20"
                 android:shadowColor="@color/color_FF000000"
                 android:shadowDx="0"
@@ -495,8 +496,6 @@
                     android:textSize="@dimen/ts_24" />
 
                 <TextView
-                    android:layout_width="@dimen/vs_5"
-                    android:layout_height="wrap_content"
                     android:text="|"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_24" />
