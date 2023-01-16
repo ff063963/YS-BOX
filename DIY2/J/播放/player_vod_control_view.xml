@@ -77,6 +77,8 @@
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/ts_26"
                 android:textStyle="bold"
+                android:orientation="horizontal"   
+                android:visibility="gone"
                 android:visibility="visible" />
 
     
@@ -86,7 +88,7 @@
                     android:id="@+id/tv_videosize"   
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"   
+ 
                     android:layout_gravity="center|left"
                     android:layout_weight="1"
                     android:gravity="center|left"
@@ -99,7 +101,10 @@
                     android:text="Speed"
                     android:textColor="@color/color_FFFFFF"
                     android:textSize="@dimen/ts_22"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" 
+                    android:orientation="horizontal"   
+                    android:visibility="gone"
+                    android:visibility="visible" />
 
     </LinearLayout>
 
