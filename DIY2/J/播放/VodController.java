@@ -205,6 +205,7 @@ public class VodController extends BaseController {
 
     int videoPlayState = 0;
 
+        FrameLayout mProgressTop;
     
     
     
@@ -291,7 +292,6 @@ public class VodController extends BaseController {
     finishAt = findViewById(R.id.tv_finish_at);
     mPlayerFFwd = findViewById(R.id.play_ff);
     mTopRoot = findViewById(R.id.top_container);
-
    mProgressTop = findViewById(R.id.tv_pause_container);      
      //btnHint = findViewById(R.id.play_btn_hint);   
         
