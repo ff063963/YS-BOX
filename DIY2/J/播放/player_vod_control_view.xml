@@ -87,7 +87,7 @@
     </LinearLayout>
 
   
-<!--开始 结束  速度--                android:paddingRight="@dimen/vs_20"   android:layout_marginRight="@dimen/vs_10">
+<!--开始 结束  速度 android:paddingRight="@dimen/vs_20"   android:layout_marginRight="@dimen/vs_10"> -->
    <LinearLayout
         android:id="@+id/tv_top_r_container"
         android:layout_width="wrap_content"
