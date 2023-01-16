@@ -170,7 +170,7 @@ public class VodController extends BaseController {
     TvRecyclerView mGridView;
     TextView mPlayTitle;
    // TextView mPlayTitle1;
-    TextView mPlayLoadNetSpeedRightTop;
+    TextView mSpeedll;
     TextView mNextBtn;
     TextView mPreBtn;
     TextView mPlayerScaleBtn;
@@ -238,14 +238,15 @@ public class VodController extends BaseController {
         Calendar date = Calendar.getInstance();
         long t = date.getTimeInMillis();
         Date afterAdd = new Date(t + TimeRemaining);
-        SimpleDateFormat timeEnd = new SimpleDateFormat("hh:mm aa", Locale.ENGLISH);
+        SimpleDateFormat timeEnd = new SimpleDateFormat("HH:mm aa", Locale.ENGLISH);
         if (isPaused) {
-            finishAt.setText("Remaining Time " + PlayerUtils.stringForTime((int) TimeRemaining) + " | Ends at " + timeEnd.format(afterAdd));
+            finishAt.setText("剩余时间 " + PlayerUtils.stringForTime((int) TimeRemaining) + " | 结束时间 " + timeEnd.format(afterAdd));
         } else {
-            finishAt.setText("Ends at " + timeEnd.format(afterAdd));
+            finishAt.setText("结束时间 " + timeEnd.format(afterAdd));
         }
         mCurrentTime.setText(PlayerUtils.stringForTimeVod(position));
         mTotalTime.setText(PlayerUtils.stringForTimeVod(duration));
+        mSpeedll.setText(speed);
         if (duration > 0) {
             mSeekBar.setEnabled(true);
             int pos = (int) (position * 1.0 / duration * mSeekBar.getMax());
@@ -296,7 +297,7 @@ public class VodController extends BaseController {
         mTotalTime = findViewById(R.id.total_time);
         mPlayTitle = findViewById(R.id.tv_info_name);
        // mPlayTitle1 = findViewById(R.id.tv_info_name1);
-        mPlayLoadNetSpeedRightTop = findViewById(R.id.tv_play_load_net_speed_right_top);
+        mSpeedll = findViewById(R.id.tv_speed_top);
         mSeekBar = findViewById(R.id.seekBar);
         mProgressRoot = findViewById(R.id.tv_progress_container);
         mProgressIcon = findViewById(R.id.tv_progress_icon);
