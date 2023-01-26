@@ -201,11 +201,27 @@ public class LivePlayActivity extends BaseActivity {
 
     @Override
     protected void init() {
+        
+        
+        // takagen99 : Hide only when video playing
+        hideSystemUI(false);
+
+        // Getting EPG Address
+        epgStringAddress = Hawk.get(HawkConfig.EPG_URL, "");
+        if (StringUtils.isBlank(epgStringAddress)) {
+            epgStringAddress = "http://epg.51zmt.top:8000/api/diyp/";
+//            Hawk.put(HawkConfig.EPG_URL, epgStringAddress);
+        }
+        // http://epg.aishangtv.top/live_proxy_epg_bc.php
+        // http://diyp.112114.xyz/
+
+        
+       /* 
         context = this;
         epgStringAddress = Hawk.get(HawkConfig.EPG_URL,"");
         if(epgStringAddress == null || epgStringAddress.length()<5)
             epgStringAddress = "https://epg.hicloud.co/epg.php";
-
+*/
         setLoadSir(findViewById(R.id.live_root));
         mVideoView = findViewById(R.id.mVideoView);
 
