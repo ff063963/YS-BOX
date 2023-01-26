@@ -129,7 +129,8 @@ public class ApiDialog extends BaseDialog {
             }
         });
         //直播历史列表
-          findViewById(R.id.liveHistory).setOnClickListener(new View.OnClickListener() {
+        
+               findViewById(R.id.liveHistory).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayList<String> liveHistory = Hawk.get(HawkConfig.LIVE_HISTORY, new ArrayList<String>());
@@ -140,7 +141,7 @@ public class ApiDialog extends BaseDialog {
                 if (liveHistory.contains(current))
                     idx = liveHistory.indexOf(current);
                 ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
-                dialog.setTip("历史直播列表");
+                dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String liveURL) {
@@ -159,7 +160,7 @@ public class ApiDialog extends BaseDialog {
         });
         
         
-        
+         
         findViewById(R.id.storagePermission).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
