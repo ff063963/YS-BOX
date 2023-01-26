@@ -100,7 +100,7 @@ public class VideoView<P extends AbstractPlayer> extends FrameLayout
     protected boolean mIsTinyScreen;//是否处于小屏状态
     protected int[] mTinyScreenSize = {0, 0};
     
-    protected IDanmakuView danmakuView;
+   // protected IDanmakuView danmakuView;
 
     /**
      * 监听系统中音频焦点改变，见{@link #setEnableAudioFocus(boolean)}
@@ -1030,9 +1030,9 @@ public class VideoView<P extends AbstractPlayer> extends FrameLayout
         }
     }
 
-    public void setDanmuView(master.flame.danmaku.controller.IDanmakuView danmakuView) {
-        this.danmakuView = danmakuView;
-    }
+ //   public void setDanmuView(master.flame.danmaku.controller.IDanmakuView danmakuView) {
+   //     this.danmakuView = danmakuView;
+ //   }
 
     /**
      * 播放状态改变监听器
