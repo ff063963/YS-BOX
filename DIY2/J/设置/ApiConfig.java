@@ -50,6 +50,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import java.nio.charset.StandardCharsets;
 /**
  * @author pj567
  * @date :2020/12/18
@@ -564,7 +565,16 @@ public class ApiConfig {
             }
         }
     }
-
+  private void putLiveHistory(String url) {
+        if (!url.isEmpty()) {
+            ArrayList<String> liveHistory = Hawk.get(HawkConfig.LIVE_HISTORY, new ArrayList<String>());
+            if (!liveHistory.contains(url))
+                liveHistory.add(0, url);
+            if (liveHistory.size() > 20)
+                liveHistory.remove(20);
+            Hawk.put(HawkConfig.LIVE_HISTORY, liveHistory);
+        }
+    }
     public void loadLives(JsonArray livesArray) {
         liveChannelGroupList.clear();
         int groupIndex = 0;
