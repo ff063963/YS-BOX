@@ -72,7 +72,7 @@ public class SearchCheckboxDialog extends BaseDialog{
         mGridView.setHasFixedSize(true);
 
         int size = mSourceList.size();
-        int spanCount = (int) Math.floor(size / 10);
+        int spanCount = (int) Math.floor(size / 4);
         if (spanCount <= 0) spanCount = 1;
         if (spanCount > 2) spanCount = 2;
         mGridView.setLayoutManager(new V7GridLayoutManager(getContext(), spanCount));
