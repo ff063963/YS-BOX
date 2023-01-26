@@ -55,7 +55,7 @@ cp $CURRENT_DIR/DIY2/J/搜索/dialog_checkbox_search.xml            $CURRENT_DIR
 cp $CURRENT_DIR/DIY2/J/搜索/SearchCheckboxDialog.java             $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/dialog/SearchCheckboxDialog.java
 cp $CURRENT_DIR/DIY2/J/搜索/button_dialog_main.xml                $CURRENT_DIR/$DIR/app/src/main/res/drawable/button_dialog_main.xml
 cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR/$DIR/app/src/main/res/drawable/shape_dialog_pg_search_checkbox.xml
-
+cp $CURRENT_DIR/DIY2/J/搜索/SearchActivity.java                   $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/SearchActivity.java
 //增加字体
 #cp $CURRENT_DIR/DIY2/J/字体/advent_pro_extralight.ttf     $CURRENT_DIR/$DIR/app/src/main/res/font/advent_pro_extralight.ttf
 //小窗修改
@@ -128,8 +128,8 @@ sed -i 's/10000/6000/g'  $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/os
 sed -i 's/TVBox/影视Box/g' $CURRENT_DIR/$DIR/app/src/main/res/values/strings.xml
 #版本号
 #sed -i 's/1.0.0/2/g'     $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/build.gradle
-sed -i 's/1.0.0/1.5.6/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
+sed -i 's/1.0.0/1.5.7/g'  $CURRENT_DIR/$DIR/app/build.gradle
+sed -i 's/1.0.0/1.5.7/g'  $CURRENT_DIR/$DIR/app/src/main/res/layout/fragment_model.xml
 #共存
 sed -i 's/com.github.tvbox.osc/com.tvbox.Q/g' $CURRENT_DIR/$DIR/app/build.gradle
 
