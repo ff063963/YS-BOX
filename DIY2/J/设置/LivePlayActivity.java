@@ -204,7 +204,7 @@ public class LivePlayActivity extends BaseActivity {
         
         
         // takagen99 : Hide only when video playing
-        hideSystemUI(false);
+       // hideSystemUI(false);
 
         // Getting EPG Address
         epgStringAddress = Hawk.get(HawkConfig.EPG_URL, "");
