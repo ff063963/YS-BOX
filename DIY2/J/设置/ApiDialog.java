@@ -141,7 +141,8 @@ public class ApiDialog extends BaseDialog {
                 if (liveHistory.contains(current))
                     idx = liveHistory.indexOf(current);
                 ApiHistoryDialog dialog = new ApiHistoryDialog(getContext());
-                dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
+                //dialog.setTip(HomeActivity.getRes().getString(R.string.dia_history_live));
+               dialog.setTip("历史直播列表");
                 dialog.setAdapter(new ApiHistoryDialogAdapter.SelectDialogInterface() {
                     @Override
                     public void click(String liveURL) {
