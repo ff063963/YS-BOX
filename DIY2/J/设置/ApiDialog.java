@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.jessyan.autosize.utils.AutoSizeUtils;
-
+import com.github.tvbox.osc.ui.activity.HomeActivity;
 
 /**
  * 描述
