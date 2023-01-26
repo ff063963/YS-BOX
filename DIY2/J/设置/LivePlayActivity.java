@@ -1553,7 +1553,7 @@ public class LivePlayActivity extends BaseActivity {
                                 }
                                 dialog.dismiss();
                             }
-  
+
                             @Override
                             public void del(String value, ArrayList<String> data) {
                                 Hawk.put(HawkConfig.LIVE_HISTORY, data);
@@ -1568,7 +1568,6 @@ public class LivePlayActivity extends BaseActivity {
         mHandler.removeCallbacks(mHideSettingLayoutRun);
         mHandler.postDelayed(mHideSettingLayoutRun, 5000);
     }
-
     private void initLiveChannelList() {
         List<LiveChannelGroup> list = ApiConfig.get().getChannelGroupList();
         if (list.isEmpty()) {
@@ -1577,6 +1576,21 @@ public class LivePlayActivity extends BaseActivity {
             return;
         }
 
+        
+        if (list.size() == 1 && list.get(0).getGroupName().startsWith("http://127.0.0.1")) {
+            showLoading();
+            loadProxyLives(list.get(0).getGroupName());
+            Toast.makeText(App.getInstance(), "Here 1" + list.get(0).getGroupName(), Toast.LENGTH_SHORT).show();
+        } else {
+            liveChannelGroupList.clear();
+            liveChannelGroupList.addAll(list);
+            Toast.makeText(App.getInstance(), "Here 2" + list.get(0).getGroupName(), Toast.LENGTH_SHORT).show();
+            showSuccess();
+            initLiveState();
+        }
+    }
+        
+        /*
         if (list.size() == 1 && list.get(0).getGroupName().startsWith("http://127.0.0.1")) {
             loadProxyLives(list.get(0).getGroupName());
         }
@@ -1587,7 +1601,7 @@ public class LivePlayActivity extends BaseActivity {
             initLiveState();
         }
     }
-
+*/
     public void loadProxyLives(String url) {
         try {
             Uri parsedUrl = Uri.parse(url);
