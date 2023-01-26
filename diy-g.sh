@@ -58,7 +58,7 @@ cp $CURRENT_DIR/DIY2/J/搜索/shape_dialog_pg_search_checkbox.xml   $CURRENT_DIR
 cp $CURRENT_DIR/DIY2/J/搜索/SearchActivity.java                   $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/activity/SearchActivity.java
 //增加弹幕
 cp $CURRENT_DIR/DIY2/J/弹幕/PlayFragment.java            $CURRENT_DIR/$DIR/app/src/main/java/com/github/tvbox/osc/ui/fragment/PlayFragment.java
-cp $CURRENT_DIR/DIY2/J/弹幕/VideoView.java            $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/player/VideoView.java
+#cp $CURRENT_DIR/DIY2/J/弹幕/VideoView.java            $CURRENT_DIR/$DIR/player/src/main/java/xyz/doikki/videoplayer/player/VideoView.java
 
 //增加字体
 #cp $CURRENT_DIR/DIY2/J/字体/advent_pro_extralight.ttf     $CURRENT_DIR/$DIR/app/src/main/res/font/advent_pro_extralight.ttf
